@@ -15,8 +15,8 @@ Zaimplementować przesył wartości liczbowej w przypadku JavaUdpServer + Python
 * Server Javy ma wypisać otrzymaną liczbę oraz odesłać liczbę zwiększoną o jeden 
 ### Zadanie 3 wskazówki 
 * Zamiana bajty –> int –> bajty w Javie:  
-*int nb = ByteBuffer.wrap(buff).getInt(); 
-buff = ByteBuffer.allocate(4).putInt(nb).array();* 
+*int nb = ByteBuffer.wrap(buff).getInt();* 
+*buff = ByteBuffer.allocate(4).putInt(nb).array();* 
  
 * Zamiana *bajty –> int  w Pythonie:  
 int.from_bytes(buff, byteorder='little')*
