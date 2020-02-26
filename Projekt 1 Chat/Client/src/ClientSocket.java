@@ -5,13 +5,13 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ClientSocket {
-    String serverAdress = "localhost";
-    int serverPort = 11000;
-    Socket server = null;
-    boolean isWork = true;
-    BufferedReader in = null;
-    PrintWriter out = null;
-    int userID;
+    private String serverAdress = "localhost";
+    private int serverPort = 11000;
+    private Socket server = null;
+
+    private BufferedReader in = null;
+    private PrintWriter out = null;
+    private int userID;
 
     public Message getMessage() throws IOException {
         return new Message (userID,in.read(),in.readLine());

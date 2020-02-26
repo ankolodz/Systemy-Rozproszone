@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ChatBox {
+public class ChatBox{
     private JTextField inputMessage;
     private JTextPane MessageBox;
     private JButton sendButton;
@@ -11,8 +11,9 @@ public class ChatBox {
 
 
 
-    public ChatBox(int friendID) {
+    public ChatBox(int friendID,ClientSocket client) {
         this.friendID = friendID;
+        this.clientSocketHandler = client;
 
         sendButton.addActionListener(new ActionListener() {
             @Override
