@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eebcf855-68d8-47e7-8bae-f84e2ee11fe1" name="Default Changelist" comment="" />
+    <list default="true" id="5d6956f7-14f9-4bae-bf62-8287d1347c22" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1YIIHQ2eCzmOqW7LKGtN6v9bGI3" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1YL5iVyUjSFLHagLuxrhbfzfOxp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -33,12 +41,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eebcf855-68d8-47e7-8bae-f84e2ee11fe1" name="Default Changelist" comment="" />
-      <created>1582623594419</created>
+      <changelist id="5d6956f7-14f9-4bae-bf62-8287d1347c22" name="Default Changelist" comment="" />
+      <created>1582709161852</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582623594419</updated>
-      <workItem from="1582623598653" duration="61000" />
+      <updated>1582709161852</updated>
+      <workItem from="1582709167024" duration="2720000" />
     </task>
     <servers />
   </component>
