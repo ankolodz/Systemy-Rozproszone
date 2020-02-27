@@ -11,6 +11,7 @@ public class Main {
         System.out.println("JAVA TCP SERVER");
         int portNumber = 11000;
         ServerSocket serverSocket = null;
+        int nextClientID = 1;
 
         try {
             // create socket
@@ -21,8 +22,9 @@ public class Main {
                 // accept client
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("client connected");
-                Client client = new Client( (clientSocket));
+                Client client = new Client( clientSocket,nextClientID);
                 client.start();
+                nextClientID++;
 
             }
         } catch (IOException e) {

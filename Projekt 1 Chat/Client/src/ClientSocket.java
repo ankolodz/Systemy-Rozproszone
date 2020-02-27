@@ -15,8 +15,7 @@ public class ClientSocket {
        return in.readLine();
     }
 
-    public ClientSocket (int userID) throws IOException {
-        this.userID = userID;
+    public ClientSocket () throws IOException, ClassNotFoundException {
             // create socket
             server = new Socket(serverAdress, serverPort);
 
@@ -25,10 +24,13 @@ public class ClientSocket {
             in = new ObjectInputStream(server.getInputStream());
 
             // send first message
-            Message message = new Message(userID,MessageType.HELLO,"");
+            Message message = new Message(-1,MessageType.HELLO,"");
             out.writeObject(message);
+            message = (Message) in.readObject();
+            userID = Integer.parseInt(message.getTextMesssage());
+
             //outData.flush();
-         System.out.println(in.readLine());
+         System.out.println(userID);
 
     }
 
