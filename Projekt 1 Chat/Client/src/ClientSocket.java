@@ -13,12 +13,13 @@ public class ClientSocket {
     private PrintWriter out = null;
     private int userID;
 
-    public String getMessage() throws IOException {
-       return in.readLine();
+    public Message getMessage() throws IOException {
+        return new Message (userID,in.read(),in.readLine());
     }
 
     public ClientSocket (int userID) throws IOException {
         this.userID = userID;
+        try {
             // create socket
             server = new Socket(serverAdress, serverPort);
 
@@ -28,17 +29,17 @@ public class ClientSocket {
 
             // send msg, read response
             out.println(userID);
-         System.out.println(in.readLine());
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (server != null){
+                server.close();
+            }
+        }
     }
 
     public void send(String message, int friendID){
         out.print(new Message (userID,friendID,message));
-    }
-    public  boolean isReady(){return server != null ? false : true;}
-    public void closeConnect() throws IOException {
-        if (server != null){
-            server.close();
-        }
     }
 }
