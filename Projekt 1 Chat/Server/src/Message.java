@@ -1,4 +1,6 @@
-public class Message {
+import java.io.Serializable;
+
+public class Message implements Serializable {
     private int fromID;
     private int toID;
     private MessageType type = MessageType.TEXT;
@@ -7,6 +9,11 @@ public class Message {
     public Message (int id, int friendID,String message){
         this.fromID = id;
         this.toID = friendID;
+        this.textMesssage = message;
+    }
+    public Message (int id, MessageType type,String message){
+        this.fromID = id;
+        this.type = type;
         this.textMesssage = message;
     }
 

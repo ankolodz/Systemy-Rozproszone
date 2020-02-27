@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 
 public class ClientSocket {
@@ -9,8 +6,9 @@ public class ClientSocket {
     private int serverPort = 11000;
     private Socket server = null;
 
-    private BufferedReader in = null;
-    private PrintWriter out = null;
+
+    private ObjectOutputStream out = null;
+    private ObjectInputStream in = null;
     private int userID;
 
     public String getMessage() throws IOException {
@@ -23,17 +21,19 @@ public class ClientSocket {
             server = new Socket(serverAdress, serverPort);
 
             // in & out streams
-            out = new PrintWriter(server.getOutputStream(), true);
-            in = new BufferedReader(new InputStreamReader(server.getInputStream()));
+            out = new ObjectOutputStream(server.getOutputStream());
+            in = new ObjectInputStream(server.getInputStream());
 
-            // send msg, read response
-            out.println(userID);
+            // send first message
+            Message message = new Message(userID,MessageType.HELLO,"");
+            out.writeObject(message);
+            //outData.flush();
          System.out.println(in.readLine());
 
     }
 
     public void send(String message, int friendID){
-        out.print(new Message (userID,friendID,message));
+        //out.print(new Message (userID,friendID,message));
     }
     public  boolean isReady(){return server != null ? false : true;}
     public void closeConnect() throws IOException {
