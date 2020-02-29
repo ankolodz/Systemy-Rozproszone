@@ -1,16 +1,13 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.LinkedHashMap;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         System.out.println("JAVA TCP SERVER");
         int portNumber = 11000;
         ServerSocket serverSocket = null;
+        CleintsHandler clients = new CleintsHandler();
         int nextClientID = 1;
 
         try {
@@ -22,8 +19,9 @@ public class Main {
                 // accept client
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("client connected");
-                Client client = new Client( clientSocket,nextClientID);
+                Client client = new Client( clientSocket,nextClientID,clients);
                 client.start();
+                clients.addClient(client, nextClientID);
                 nextClientID++;
 
             }

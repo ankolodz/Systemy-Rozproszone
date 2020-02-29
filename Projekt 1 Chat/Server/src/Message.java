@@ -5,16 +5,17 @@ public class Message implements Serializable {
     private int toID;
     private MessageType type = MessageType.TEXT;
     private String textMesssage;
+    private Object object;
 
     public Message (int id, int friendID,String message){
         this.fromID = id;
         this.toID = friendID;
         this.textMesssage = message;
     }
-    public Message (int id, MessageType type,String message){
+    public Message (int id, MessageType type,Object message){
         this.fromID = id;
         this.type = type;
-        this.textMesssage = message;
+        this.object = message;
     }
 
     public int getFromID() {
@@ -28,4 +29,6 @@ public class Message implements Serializable {
     public String getTextMesssage() {
         return textMesssage;
     }
+
+    public Object getObject(){ return object;}
 }
