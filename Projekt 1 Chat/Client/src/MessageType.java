@@ -1,3 +1,3 @@
 public enum MessageType {
-    TEXT, FRIEND_LIST, HELLO;
+    TEXT, FRIEND_LIST, HELLO,BROADCAST;
 }

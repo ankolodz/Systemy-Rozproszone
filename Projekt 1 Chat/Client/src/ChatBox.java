@@ -19,7 +19,7 @@ public class ChatBox{
             @Override
             public void actionPerformed(ActionEvent e) {
                 String messageToSend = inputMessage.getText();
-                clientSocketHandler.send(messageToSend, friendID);
+                //clientSocketHandler.send(messageToSend, friendID);
                 inputMessage.setText("");
             }
         });

@@ -10,23 +10,27 @@ public class ClientSocket {
     private ObjectOutputStream out = null;
     private ObjectInputStream in = null;
     private int userID;
+    private String name;
 
     public String getMessage() throws IOException {
        return in.readLine();
     }
 
-    public ClientSocket () throws IOException, ClassNotFoundException {
+    public ClientSocket (String name) throws IOException, ClassNotFoundException {
             // create socket
             server = new Socket(serverAdress, serverPort);
+            this.name = name;
 
             // in & out streams
             out = new ObjectOutputStream(server.getOutputStream());
             in = new ObjectInputStream(server.getInputStream());
 
             // send first message
-            Message message = new Message(-1,MessageType.HELLO,"");
+            Message message = new Message(-1,MessageType.HELLO,name);
+        System.out.println(message.getTextMesssage());
             out.writeObject(message);
             message = (Message) in.readObject();
+            System.out.println(message.getTextMesssage());
             userID = Integer.parseInt(message.getTextMesssage());
 
             //outData.flush();
@@ -34,10 +38,15 @@ public class ClientSocket {
 
     }
 
-    public void send(String message, int friendID){
-        //out.print(new Message (userID,friendID,message));
+    public void sendBroadCast(String message){
+        try {
+            out.writeObject(new Message (userID,MessageType.BROADCAST,message));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public  boolean isReady(){return server != null ? false : true;}
+
     public void closeConnect() throws IOException {
         if (server != null){
             server.close();

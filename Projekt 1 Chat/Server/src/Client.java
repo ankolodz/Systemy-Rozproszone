@@ -44,7 +44,8 @@ public class Client extends Thread {
     private void sendMessageBroadCast(String text) throws IOException {
         Collection<Client> clientsList = clients.getClientsList();
         for (Client i:clientsList) {
-            i.sendTextMessage(ID,text);
+            if (!i.getClientName().equals(name))
+                i.sendTextMessage(i.ID,text);
         }
     }
 
@@ -53,25 +54,32 @@ public class Client extends Thread {
         try {
             Message message = (Message) in.readObject();
             switch (message.getType()) {
-                case TEXT:
+                case BROADCAST:
                     sendMessageBroadCast(message.getTextMesssage());
                     break;
+                case FRIEND_LIST:
 
+                    break;
                 default:
                     System.out.println("Nieznane polecenie");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(name+" "+ID+" disconect");
         }
     }
 
         private void  init() throws IOException, ClassNotFoundException {
-            Message initialMessage = (Message) in.readObject();
-            if (!initialMessage.getType().equals(MessageType.HELLO))
-                throw new ExceptionInInitializerError();
-            this.name = initialMessage.getTextMesssage();
-            initialMessage = new Message(0,MessageType.HELLO, String.valueOf(ID));
-            out.writeObject(initialMessage);
+            //in.read();
+            while (name == null){
+                Message initialMessage = (Message) in.readObject();
+                if (!initialMessage.getType().equals(MessageType.HELLO))
+                    throw new ExceptionInInitializerError();
+                this.name = initialMessage.getTextMesssage();
+                System.out.println(name);
+                initialMessage = new Message(0,MessageType.HELLO, String.valueOf(ID));
+                out.writeObject(initialMessage);
+            }
+
     }
 
 }

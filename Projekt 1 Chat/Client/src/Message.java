@@ -28,4 +28,6 @@ public class Message implements Serializable {
     public String getTextMesssage() {
         return textMesssage;
     }
+
+    //public Object getObject(){ return object;}
 }
