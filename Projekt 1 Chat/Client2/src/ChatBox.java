@@ -18,23 +18,28 @@ public class ChatBox{
             @Override
             public void actionPerformed(ActionEvent e) {
                 String messageToSend = inputMessage.getText();
-                //clientSocketHandler.send(messageToSend, friendID);
+                clientSocketHandler.sendBroadCast(messageToSend);
+                newMessage("\nYou: "+messageToSend);
                 inputMessage.setText("");
             }
 
         });
         MainWindow.setVisible(true);
     }
-    public void start(){
+    public void start(String login){
 
-        mainWindow = new JFrame("AK's Chat");
+        mainWindow = new JFrame("AK's Chat -"+login);
         mainWindow.setContentPane(this.MainWindow);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainWindow.setSize(800,600);
        // mainWindow.pack();
         mainWindow.setVisible(true);
+        newMessage("Witaj "+login+" dołącz do grupowej konwersacji");
     }
     public static String getNick (){
         return JOptionPane.showInputDialog("Podaj nick");
+    }
+    public void newMessage (String message){
+        MessageBox.setText(MessageBox.getText() + "\n" + message);
     }
 }

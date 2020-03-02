@@ -15,7 +15,7 @@ public class ClientSocket {
     public String getMessage() throws IOException {
         try {
             Message message = (Message) in.readObject();
-            return message.getFromID() + " " + message.getTextMesssage();
+            return message.getTextMesssage();
         } catch (ClassNotFoundException e) {
             return "Błąd wiadomości";
         }

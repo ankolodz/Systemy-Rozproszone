@@ -44,7 +44,7 @@ public class Client extends Thread {
     private void sendMessageBroadCast(String text) throws IOException {
         Collection<Client> clientsList = clients.getClientsList();
         for (Client i:clientsList) {
-            if (!i.getClientName().equals(name))
+            if (!i.getClientName().equals(name) && i.getClientSocket()!= null)
                 i.sendTextMessage(i.ID,name + ": " + text);
         }
     }

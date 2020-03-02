@@ -21,6 +21,7 @@
         </constraints>
         <properties>
           <editable value="false"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="96865" class="javax.swing.JButton" binding="sendButton" default-binding="true">
