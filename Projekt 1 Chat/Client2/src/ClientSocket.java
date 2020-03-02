@@ -13,7 +13,13 @@ public class ClientSocket {
     private String name;
 
     public String getMessage() throws IOException {
-       return in.readLine();
+        try {
+            Message message = (Message) in.readObject();
+            return message.getFromID() + " " + message.getTextMesssage();
+        } catch (ClassNotFoundException e) {
+            return "Błąd wiadomości";
+        }
+
     }
 
     public ClientSocket (String name) throws IOException, ClassNotFoundException {

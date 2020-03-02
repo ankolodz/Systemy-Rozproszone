@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Client2:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d6956f7-14f9-4bae-bf62-8287d1347c22" name="Default Changelist" comment="" />
+    <list default="true" id="ba1cf12c-ef83-40ae-b7e1-c1cca4e42d65" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Enum" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1YL5iVyUjSFLHagLuxrhbfzfOxp" />
+  <component name="ProjectId" id="1YZZ3zR9JR1YuqHHF2O2IznYeiE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -41,7 +40,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Client" />
+      <module name="Client2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -57,17 +56,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5d6956f7-14f9-4bae-bf62-8287d1347c22" name="Default Changelist" comment="" />
-      <created>1582709161852</created>
+      <changelist id="ba1cf12c-ef83-40ae-b7e1-c1cca4e42d65" name="Default Changelist" comment="" />
+      <created>1583151881064</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582709161852</updated>
-      <workItem from="1582709167024" duration="3202000" />
-      <workItem from="1582722230043" duration="3927000" />
-      <workItem from="1582807254315" duration="3027000" />
-      <workItem from="1582835265438" duration="963000" />
-      <workItem from="1582870857058" duration="1605000" />
-      <workItem from="1583006987697" duration="3701000" />
+      <updated>1583151881064</updated>
+      <workItem from="1583151885409" duration="8258000" />
     </task>
     <servers />
   </component>
@@ -79,9 +73,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>

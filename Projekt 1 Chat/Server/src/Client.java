@@ -45,25 +45,31 @@ public class Client extends Thread {
         Collection<Client> clientsList = clients.getClientsList();
         for (Client i:clientsList) {
             if (!i.getClientName().equals(name))
-                i.sendTextMessage(i.ID,text);
+                i.sendTextMessage(i.ID,name + ": " + text);
         }
     }
 
 
-    private void messageHandler () {
+    private void messageHandler () throws IOException {
         try {
-            Message message = (Message) in.readObject();
-            switch (message.getType()) {
-                case BROADCAST:
-                    sendMessageBroadCast(message.getTextMesssage());
-                    break;
-                case FRIEND_LIST:
+            while (true) {
+                Message message = (Message) in.readObject();
+                switch (message.getType()) {
+                    case BROADCAST:
+                        sendMessageBroadCast(message.getTextMesssage());
+                        break;
+                    case FRIEND_LIST:
 
-                    break;
-                default:
-                    System.out.println("Nieznane polecenie");
+                        break;
+                    default:
+                        System.out.println("Nieznane polecenie");
+                }
             }
         } catch (Exception e) {
+            e.printStackTrace();
+            if (!clientSocket.isClosed())
+                clientSocket.close();
+            clientSocket = null;
             System.out.println(name+" "+ID+" disconect");
         }
     }

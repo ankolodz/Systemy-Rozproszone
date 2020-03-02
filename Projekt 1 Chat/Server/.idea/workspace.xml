@@ -27,6 +27,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -68,7 +69,9 @@
       <workItem from="1582826445103" duration="2740000" />
       <workItem from="1582835272147" duration="954000" />
       <workItem from="1582870891787" duration="1601000" />
-      <workItem from="1582918249618" duration="11011000" />
+      <workItem from="1582918249618" duration="12383000" />
+      <workItem from="1583014392589" duration="590000" />
+      <workItem from="1583151722311" duration="4562000" />
     </task>
     <servers />
   </component>
