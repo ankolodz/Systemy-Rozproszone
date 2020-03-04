@@ -1,38 +1,20 @@
 import java.io.IOException;
+import java.net.DatagramSocket;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        System.out.println("JAVA TCP SERVER");
-        int portNumber = 11000;
-        ServerSocket serverSocket = null;
+    public static void main(String[] args) throws InterruptedException {
+        int portnumber = 11000;
         CleintsHandler clients = new CleintsHandler();
-        int nextClientID = 1;
 
-        try {
-            // create socket
-            serverSocket = new ServerSocket(portNumber);
+        TCPsocketServer tcpSocket = new TCPsocketServer(portnumber,clients);
+        tcpSocket.start();
 
-            while(true){
+        UDPsocketServer udpSocket = new UDPsocketServer(portnumber,clients);
+        udpSocket.start();
 
-                // accept client
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("client connected");
-                Client client = new Client( clientSocket,nextClientID,clients);
-                client.start();
-                clients.addClient(client, nextClientID);
-                nextClientID++;
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        finally{
-            if (serverSocket != null){
-                serverSocket.close();
-            }
-        }
+        tcpSocket.join();
 
     }
 }
