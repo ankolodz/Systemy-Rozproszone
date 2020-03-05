@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1296ebb5-ab58-4c24-b76c-a71ddefcda09" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TCPsocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UDPsocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Client$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/MessageType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/MessageType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UDPsocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UDPsocketServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +77,8 @@
       <workItem from="1583151722311" duration="6259000" />
       <workItem from="1583224617326" duration="118000" />
       <workItem from="1583257625033" duration="1686000" />
-      <workItem from="1583325065365" duration="3233000" />
+      <workItem from="1583325065365" duration="4026000" />
+      <workItem from="1583389482687" duration="1816000" />
     </task>
     <servers />
   </component>
