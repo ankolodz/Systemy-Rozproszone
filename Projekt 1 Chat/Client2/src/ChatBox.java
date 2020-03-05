@@ -1,30 +1,42 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class ChatBox{
     private JTextField inputMessage;
-    private JTextPane MessageBox;
+    private JPanel MessageBox;
     private JButton sendButton;
     private JPanel MainWindow;
     private ClientSocket clientSocketHandler;
     private JFrame mainWindow;
+    Box box;
 
 
     public ChatBox(ClientSocket clientSocket) {
         this.clientSocketHandler = clientSocket;
-
+        box =  Box.createVerticalBox();
+        MessageBox.add(box);
         sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String messageToSend = inputMessage.getText();
                 clientSocketHandler.sendBroadCast(messageToSend);
-                newMessage("\nYou: "+messageToSend);
+                newMessage("You: "+messageToSend);
                 inputMessage.setText("");
             }
 
         });
         MainWindow.setVisible(true);
+        inputMessage.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                if (e.getKeyChar() == '\n')
+                    sendButton.doClick();
+            }
+        });
     }
     public void start(String login){
 
@@ -40,6 +52,8 @@ public class ChatBox{
         return JOptionPane.showInputDialog("Podaj nick");
     }
     public void newMessage (String message){
-        MessageBox.setText(MessageBox.getText() + "\n" + message);
+        box.add(new JLabel(message));
+        mainWindow.validate();
+        mainWindow.repaint();
     }
 }

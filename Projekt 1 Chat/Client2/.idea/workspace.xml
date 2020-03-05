@@ -6,7 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba1cf12c-ef83-40ae-b7e1-c1cca4e42d65" name="Default Changelist" comment="" />
+    <list default="true" id="ba1cf12c-ef83-40ae-b7e1-c1cca4e42d65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/ChatBox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ChatBox$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/ChatBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ChatBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatBox.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatBox.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +82,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
