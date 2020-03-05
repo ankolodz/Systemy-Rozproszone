@@ -1,7 +1,9 @@
 import java.io.*;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.net.SocketException;
+import java.util.Collection;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -66,7 +68,25 @@ public class UDPsocketServer extends Thread{
 
         @Override
         public void run() {
-            System.out.println("Do something");
+            Collection<Client> clientList = clients.getClientsList();
+            try {
+                ByteArrayOutputStream outData = new ByteArrayOutputStream();
+                ObjectOutputStream out = new ObjectOutputStream(outData);
+                out.writeObject(message);
+                byte[] data = outData.toByteArray();
+
+            for (Client i :clientList) {
+                if (i.getId() != message.getFromID()){
+                    InetAddress address = i.getClientSocket().getInetAddress();
+                    int port = i.getClientSocket().getPort();
+                    DatagramPacket datagramPacket = new DatagramPacket(data,data.length,address,port);
+                    serverSocket.receive(datagramPacket);
+                }
+            }
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
