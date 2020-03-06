@@ -58,7 +58,7 @@ public class Client extends Thread {
                     case BROADCAST:
                         sendMessageBroadCast(message.getTextMesssage());
                         break;
-                    case FRIEND_LIST:
+                    case UDP:
 
                         break;
                     default:

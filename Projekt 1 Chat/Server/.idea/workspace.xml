@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1296ebb5-ab58-4c24-b76c-a71ddefcda09" name="Default Changelist" comment="" />
+    <list default="true" id="1296ebb5-ab58-4c24-b76c-a71ddefcda09" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client2/src/localASCIIart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/out/artifacts/Client2_jar/Client2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/out/artifacts/Client2_jar/Client2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/out/production/Client2/ChatBox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/out/production/Client2/ChatBox$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/out/production/Client2/ChatBox$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/out/production/Client2/ChatBox$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/out/production/Client2/ChatBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/out/production/Client2/ChatBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/out/production/Client2/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/out/production/Client2/ClientSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/out/production/Client2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/out/production/Client2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/src/ChatBox.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/src/ChatBox.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/src/ChatBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/src/ChatBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client2/src/MultimediaSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2/src/MultimediaSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TCPsocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TCPsocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UDPsocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UDPsocketServer.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +88,13 @@
       <workItem from="1582870891787" duration="1601000" />
       <workItem from="1582918249618" duration="12383000" />
       <workItem from="1583014392589" duration="590000" />
-      <workItem from="1583151722311" duration="5682000" />
+      <workItem from="1583151722311" duration="6259000" />
+      <workItem from="1583224617326" duration="118000" />
+      <workItem from="1583257625033" duration="1686000" />
+      <workItem from="1583325065365" duration="4026000" />
+      <workItem from="1583389482687" duration="3549000" />
+      <workItem from="1583478873252" duration="2938000" />
+      <workItem from="1583486061848" duration="2230000" />
     </task>
     <servers />
   </component>
