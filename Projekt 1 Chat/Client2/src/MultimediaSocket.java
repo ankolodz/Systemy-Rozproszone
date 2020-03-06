@@ -20,28 +20,36 @@ public class MultimediaSocket extends Thread{
     }
 
     @Override
-    public void start(){
+    public void run(){
         try{
             socket = new DatagramSocket(myPort);
+            System.out.println("Port: " + myPort);
             byte[] response = new byte[4096];
 
             while (true){
                 DatagramPacket incomingPackage = new DatagramPacket(response,response.length);
+                System.out.println("Oczekiwanie na wiadomość");
+                socket.receive(incomingPackage);
+                System.out.println("Otrzymano wiadomość");
                 byte[] data = incomingPackage.getData();
 
                 ByteArrayInputStream byteIN = new ByteArrayInputStream(data);
                 ObjectInputStream in = new ObjectInputStream(byteIN);
 
-                Message message = (Message) in.readObject();
+                Message message = null;
+                message = (Message) in.readObject();
+
+
                 chatBox.newMessage(message.getTextMesssage());
             }
         }
         catch (SocketException e) {
             System.out.println("Błąd utworzenia socketu multimediów");
-        } catch (IOException e) {
-            System.out.println("Błąd parsingu");
         } catch (ClassNotFoundException e) {
             System.out.println("Błędny format wiadomości");
+        }catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Błąd parsingu");
         }
     }
 

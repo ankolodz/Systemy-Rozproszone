@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.net.DatagramSocket;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -13,8 +12,8 @@ public class TCPsocketServer extends Thread {
         this.clients = clients;
         this.portNumber = portNumber;
     }
-
-    public void start() {
+    @Override
+    public void run() {
         try {
             serverSocket = new ServerSocket(portNumber);
             while (true) {

@@ -9,6 +9,7 @@ public class ChatBox{
     private JPanel MessageBox;
     private JButton sendButton;
     private JPanel MainWindow;
+    private JButton sendAsciiArt;
     private ClientSocket clientSocketHandler;
     private JFrame mainWindow;
     Box box;
@@ -38,6 +39,14 @@ public class ChatBox{
                     sendButton.doClick();
             }
         });
+        sendAsciiArt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                multimediaSocket.send(localASCIIart.mountain());
+                newMessage("You:\n"+localASCIIart.mountain());
+                inputMessage.setText("");
+            }
+        });
     }
     public void start(String login){
 
@@ -52,7 +61,7 @@ public class ChatBox{
         return JOptionPane.showInputDialog("Podaj nick");
     }
     public void newMessage (String message){
-        box.add(new JLabel(message));
+        box.add(new JTextArea(message));
         mainWindow.validate();
         mainWindow.repaint();
     }

@@ -17,13 +17,14 @@ public class UDPsocketServer extends Thread{
         this.port = port;
         this.clients = clients;
     }
-
-    public void start(){
+    @Override
+    public void run(){
         try {
+            System.out.println("Start UDP");
             serverSocket = new DatagramSocket(port);
             byte[] incomingData = new byte[4096];
 
-            threadPool = Executors.newFixedThreadPool(200);
+            threadPool = Executors.newFixedThreadPool(5);
 
 
             while (true){
@@ -33,10 +34,10 @@ public class UDPsocketServer extends Thread{
 
                 ByteArrayInputStream byteIN = new ByteArrayInputStream(data);
                 ObjectInputStream in = new ObjectInputStream(byteIN);
-
+                System.out.println("Start listening UDP");
                 try{
                     Message message = (Message) in.readObject();
-
+                    System.out.println("Server have a message");
                     Runnable worker = new UDPworker(message,clients);
                     threadPool.execute(worker);
                 }
@@ -74,13 +75,15 @@ public class UDPsocketServer extends Thread{
                 ObjectOutputStream out = new ObjectOutputStream(outData);
                 out.writeObject(message);
                 byte[] data = outData.toByteArray();
-
+                System.out.println("Workers is working");
             for (Client i :clientList) {
-                if (i.getId() != message.getFromID()){
+                if (i.getId() != message.getFromID() || i.getClientSocket() != null){
                     InetAddress address = i.getClientSocket().getInetAddress();
                     int port = i.getClientSocket().getPort();
+                    System.out.println(address.getHostName()+ " " + port + " "+i.getClientName());
                     DatagramPacket datagramPacket = new DatagramPacket(data,data.length,address,port);
-                    serverSocket.receive(datagramPacket);
+                    serverSocket.send(datagramPacket);
+
                 }
             }
             }

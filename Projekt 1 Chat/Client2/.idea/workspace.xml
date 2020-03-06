@@ -7,12 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba1cf12c-ef83-40ae-b7e1-c1cca4e42d65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MultimediaSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/localASCIIart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Client2_jar/Client2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Client2_jar/Client2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/ChatBox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ChatBox$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/ChatBox$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ChatBox$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/ChatBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ChatBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ClientSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatBox.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatBox.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChatBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MultimediaSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultimediaSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/TCPsocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/TCPsocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/UDPsocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/UDPsocketServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +43,7 @@
   <component name="ProjectId" id="1YZZ3zR9JR1YuqHHF2O2IznYeiE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -81,7 +92,8 @@
       <option name="presentableId" value="Default" />
       <updated>1583151881064</updated>
       <workItem from="1583151885409" duration="10907000" />
-      <workItem from="1583478544439" duration="2875000" />
+      <workItem from="1583478544439" duration="6229000" />
+      <workItem from="1583486800538" duration="1695000" />
     </task>
     <servers />
   </component>
