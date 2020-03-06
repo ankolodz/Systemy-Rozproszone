@@ -7,12 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba1cf12c-ef83-40ae-b7e1-c1cca4e42d65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MultimediaSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client2/ChatBox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ChatBox$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client2/ChatBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/ChatBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatBox.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatBox.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChatBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -21,6 +19,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -33,6 +38,11 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,6 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583151881064</updated>
       <workItem from="1583151885409" duration="10907000" />
+      <workItem from="1583478544439" duration="2875000" />
     </task>
     <servers />
   </component>

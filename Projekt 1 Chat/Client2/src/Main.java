@@ -11,10 +11,10 @@ public class Main {
         String nick = ChatBox.getNick();
         ClientSocket clientSocket = new ClientSocket(nick);
         ChatBox chatBox = new ChatBox(clientSocket);
-       // MultimediaSocket multimediaSocket = new MultimediaSocket(chatBox);
+        MultimediaSocket multimediaSocket = new MultimediaSocket(chatBox,clientSocket.getMyPort(),clientSocket.getID());
 
-        //chatBox.setMultimediaSocket(multimediaSocket);
-        //multimediaSocket.start();
+        chatBox.setMultimediaSocket(multimediaSocket);
+        multimediaSocket.start();
         chatBox.start(nick);
 
 

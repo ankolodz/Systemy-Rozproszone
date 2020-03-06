@@ -51,11 +51,15 @@ public class ClientSocket {
             e.printStackTrace();
         }
     }
-    public  boolean isReady(){return server != null ? false : true;}
+
 
     public void closeConnect() throws IOException {
         if (server != null){
             server.close();
         }
     }
+    public int getMyPort (){
+        return server.getLocalPort();
+    }
+    public int getID () {return userID;}
 }

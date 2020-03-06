@@ -12,6 +12,7 @@ public class ChatBox{
     private ClientSocket clientSocketHandler;
     private JFrame mainWindow;
     Box box;
+    private  MultimediaSocket multimediaSocket;
 
 
     public ChatBox(ClientSocket clientSocket) {
@@ -44,7 +45,6 @@ public class ChatBox{
         mainWindow.setContentPane(this.MainWindow);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainWindow.setSize(800,600);
-       // mainWindow.pack();
         mainWindow.setVisible(true);
         newMessage("Witaj "+login+" dołącz do grupowej konwersacji");
     }
@@ -55,5 +55,12 @@ public class ChatBox{
         box.add(new JLabel(message));
         mainWindow.validate();
         mainWindow.repaint();
+    }
+
+//    public void newMultimediaMessage(Message message) {
+//    }
+
+    public void setMultimediaSocket(MultimediaSocket multimediaSocket) {
+        this.multimediaSocket = multimediaSocket;
     }
 }
