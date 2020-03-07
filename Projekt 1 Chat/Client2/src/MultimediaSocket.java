@@ -28,9 +28,7 @@ public class MultimediaSocket extends Thread{
 
             while (true){
                 DatagramPacket incomingPackage = new DatagramPacket(response,response.length);
-                System.out.println("Oczekiwanie na wiadomość");
                 socket.receive(incomingPackage);
-                System.out.println("Otrzymano wiadomość");
                 byte[] data = incomingPackage.getData();
 
                 ByteArrayInputStream byteIN = new ByteArrayInputStream(data);
@@ -38,9 +36,8 @@ public class MultimediaSocket extends Thread{
 
                 Message message = null;
                 message = (Message) in.readObject();
-
-
-                chatBox.newMessage(message.getTextMesssage());
+                System.out.println("Have message");
+                chatBox.newMessage(message.getTextMesssage(),false);
             }
         }
         catch (SocketException e) {
@@ -65,6 +62,7 @@ public class MultimediaSocket extends Thread{
 
             DatagramPacket sendPackage = new DatagramPacket(data,data.length,addres,serverPort);
             socket.send(sendPackage);
+            System.out.println("Sending UDP");
 
         } catch (UnknownHostException e) {
             System.out.println("Błąd rzutowania adresu serwera");

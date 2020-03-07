@@ -34,10 +34,10 @@ public class UDPsocketServer extends Thread{
 
                 ByteArrayInputStream byteIN = new ByteArrayInputStream(data);
                 ObjectInputStream in = new ObjectInputStream(byteIN);
-                System.out.println("Start listening UDP");
+                //System.out.println("Start listening UDP");
                 try{
                     Message message = (Message) in.readObject();
-                    System.out.println("Server have a message");
+                    //System.out.println("Server have a message");
                     Runnable worker = new UDPworker(message,clients);
                     threadPool.execute(worker);
                 }
@@ -69,18 +69,19 @@ public class UDPsocketServer extends Thread{
 
         @Override
         public void run() {
+            System.out.println("Starting multimedia socket");
             Collection<Client> clientList = clients.getClientsList();
             try {
                 ByteArrayOutputStream outData = new ByteArrayOutputStream();
                 ObjectOutputStream out = new ObjectOutputStream(outData);
                 out.writeObject(message);
                 byte[] data = outData.toByteArray();
-                System.out.println("Workers is working");
+                //System.out.println("Workers is working");
             for (Client i :clientList) {
-                if (i.getId() != message.getFromID() || i.getClientSocket() != null){
+                if ( i.getClientSocket() != null && i.getID() != message.getFromID()){
                     InetAddress address = i.getClientSocket().getInetAddress();
                     int port = i.getClientSocket().getPort();
-                    System.out.println(address.getHostName()+ " " + port + " "+i.getClientName());
+                    System.out.println(address.getHostName()+ " " + port + " "+i.getClientName()+" id: "+message.getFromID()+" "+i.getId());
                     DatagramPacket datagramPacket = new DatagramPacket(data,data.length,address,port);
                     serverSocket.send(datagramPacket);
 

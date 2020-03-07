@@ -12,9 +12,12 @@ public class Main {
         ClientSocket clientSocket = new ClientSocket(nick);
         ChatBox chatBox = new ChatBox(clientSocket);
         MultimediaSocket multimediaSocket = new MultimediaSocket(chatBox,clientSocket.getMyPort(),clientSocket.getID());
+        MulticastClientSocket multicastSocket = new MulticastClientSocket(chatBox,clientSocket.getID(),nick);
 
         chatBox.setMultimediaSocket(multimediaSocket);
+        chatBox.setMulticastSocket(multicastSocket);
         multimediaSocket.start();
+        multicastSocket.start();
         chatBox.start(nick);
 
 
@@ -23,7 +26,7 @@ public class Main {
                 try {
                     String text;
                     text = clientSocket.getMessage();
-                    chatBox.newMessage(text);
+                    chatBox.newMessage(text,false);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
