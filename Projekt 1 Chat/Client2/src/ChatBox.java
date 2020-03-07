@@ -70,6 +70,9 @@ public class ChatBox{
         mainWindow.setVisible(true);
         newMessage("Witaj "+login+" dołącz do grupowej konwersacji",true);
     }
+    public void stop (){
+        mainWindow.dispose();
+    }
     public static String getNick (){
         return JOptionPane.showInputDialog("Podaj nick");
     }
@@ -94,4 +97,11 @@ public class ChatBox{
     }
 
     public void setMulticastSocket(MulticastClientSocket multicastSocket) {this.multicastSocket = multicastSocket; }
+
+    public static void alert(String text){
+        JOptionPane.showMessageDialog(null,
+                text,
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+    }
 }

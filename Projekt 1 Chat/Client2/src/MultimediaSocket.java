@@ -49,7 +49,10 @@ public class MultimediaSocket extends Thread{
             System.out.println("Błąd parsingu");
         }
     }
-
+    public void closeConnetion() {
+        if (socket != null && socket.isClosed() == false)
+            socket.close();
+    }
     public void send (String multimediaMessage){
         try {
             InetAddress addres = InetAddress.getByName(serverAdress);
@@ -66,7 +69,10 @@ public class MultimediaSocket extends Thread{
 
         } catch (UnknownHostException e) {
             System.out.println("Błąd rzutowania adresu serwera");
-        } catch (IOException e) {
+        }  catch (SocketException e){
+            System.out.println("Close");
+            return;
+        }catch (IOException e) {
             e.printStackTrace();
         }
     }

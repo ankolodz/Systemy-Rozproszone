@@ -1,8 +1,5 @@
 import java.io.*;
-import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
-import java.net.UnknownHostException;
+import java.net.*;
 
 public class MulticastClientSocket extends Thread {
 
@@ -10,6 +7,7 @@ public class MulticastClientSocket extends Thread {
     private ChatBox chatBox;
     private int id;
     private String nick;
+    boolean work = true;
 
     public MulticastClientSocket(ChatBox chatBox, int id, String nick){
         this.chatBox = chatBox;
@@ -25,7 +23,7 @@ public class MulticastClientSocket extends Thread {
             socket.joinGroup(adress);
             byte[] response = new byte[20000];
 
-            while(true){
+            while(work){
                 DatagramPacket incomingPackage = new DatagramPacket(response,response.length);
                 socket.receive(incomingPackage);
                 byte[] data = incomingPackage.getData();
@@ -40,6 +38,9 @@ public class MulticastClientSocket extends Thread {
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
+        } catch (SocketException e){
+            System.out.println("Close");
+            return;
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -62,4 +63,8 @@ public class MulticastClientSocket extends Thread {
         }
     }
 
+    public void closeConnetion() {
+        if (socket != null && socket.isClosed() == false)
+            socket.close();
+    }
 }
