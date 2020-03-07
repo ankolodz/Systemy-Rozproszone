@@ -37,6 +37,8 @@ public class Client extends Thread {
     public Socket getClientSocket() {
         return clientSocket;
     }
+
+    public int getID (){return this.ID;}
     public void sendTextMessage(int frinedID, String text) throws IOException {
         Message message = new Message(ID,frinedID,text);
         out.writeObject(message);
