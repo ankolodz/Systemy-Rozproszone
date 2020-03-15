@@ -68,7 +68,6 @@ public class Client extends Thread {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
             if (!clientSocket.isClosed())
                 clientSocket.close();
             clientSocket = null;
