@@ -39,6 +39,7 @@ public class WebMenager {
                 "Miasto: "+city+
                 "<br> Parametr: "+param+
                 "<br> Mean: "+mean+
+                "<br> <a href=\"http://localhost:8080\">BACK</a>"+
                 "</body></html>";
     }
 
