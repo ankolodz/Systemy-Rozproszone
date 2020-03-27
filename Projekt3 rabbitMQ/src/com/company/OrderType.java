@@ -6,8 +6,8 @@ public enum OrderType {
     PASSENGER("PASSENGER"),
     SATELLITE("SATELLITE"),
     CARGO("CARGO"),
-    AGENCY(""),
-    DELIVER("");
+    ADMIN("ADMIN");
+
 
     private final String name;
 

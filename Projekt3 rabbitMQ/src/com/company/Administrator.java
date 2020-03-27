@@ -7,29 +7,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.concurrent.TimeoutException;
 
-public class Agency {
-    private String name;
-    private int id = 0;
+public class Administrator {
+
     private ConnectionFactory factory;
     private Connection connection;
     private Channel channel;
     private String EXCHANGE_NAME = "exchange1";
 
-    public Agency(String name) {
-        this.name = name;
-    }
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        System.out.println("Podaj nazwę");
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        String name = in.readLine();
 
-        Agency agency = new Agency (name);
-        agency.run();
+        Administrator administrator = new Administrator();
+        administrator.run();
     }
 
     public void run() throws IOException, TimeoutException {
-        System.out.println("Agency is ready");
+        System.out.println("Administrator is ready");
         // connection & channel
         factory = new ConnectionFactory();
         factory.setHost("localhost");
@@ -63,48 +56,37 @@ public class Agency {
 
             // read msg
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter orderType: ");
-            String orderString = br.readLine();
+            System.out.println("Enter send to: ");
+            String name = br.readLine();
 
-            OrderType orderType = OrderType.valueOf(orderString.toUpperCase());
-            Order order = new Order(orderType,name, nextID());
-
+            if (!name.equals("all"))
+                name = "all." + name;
+            System.out.println(name);
+            Order order = new Order(OrderType.ADMIN,"Administrator",-1);
             // publish
-            channel.basicPublish(EXCHANGE_NAME, "all.deliver."+order.getTypeName(), null, order.toByte());
+            channel.basicPublish(EXCHANGE_NAME, name, null, order.toByte());
 
         }
 
     }
 
-    private int nextID() {
-        id++;
-        return id;
-    }
 
     private void messageHandler() throws IOException, TimeoutException {
-        //key
-        String key1 = "all.agency."+name;
-        String key2 = "all.agency";
-        String key3 = "all";
 
         // queue & bind
         String queueName = channel.queueDeclare().getQueue();
-        channel.queueBind(queueName, EXCHANGE_NAME, key1);
-        channel.queueBind(queueName, EXCHANGE_NAME, key2);
-        channel.queueBind(queueName, EXCHANGE_NAME, key3);
+        channel.queueBind(queueName, EXCHANGE_NAME, "all.#.#");
 
         // consumer (message handling)
         Consumer consumer = new DefaultConsumer(channel) {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 Order order = Order.createFromBythe(body);
-                System.out.println("Done " + order.toString());
+                System.out.println("Message: " + order.toString());
             }
         };
 
         // start listening
         channel.basicConsume(queueName, true, consumer);
     }
-
-
 }

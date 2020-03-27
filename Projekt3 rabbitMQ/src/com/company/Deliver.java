@@ -60,15 +60,19 @@ public class Deliver {
 
     private void messageHandler() throws IOException, TimeoutException {
         //key
-        String key1 = "deliver."+firstSpecialisation.getName();
-        String key2 = "deliver."+secondSpecialisation.getName();
+        String key1 = "all.deliver."+firstSpecialisation.getName();
+        String key2 = "all.deliver."+secondSpecialisation.getName();
 
         // queue & bind
         channel.queueDeclare(firstSpecialisation.getName(), false, false, false, null);
         channel.queueDeclare(secondSpecialisation.getName(), false, false, false, null);
-        
+        String queueName = channel.queueDeclare().getQueue();
+
+
         channel.queueBind(firstSpecialisation.getName(), EXCHANGE_NAME, key1);
         channel.queueBind(secondSpecialisation.getName(), EXCHANGE_NAME, key2);
+        channel.queueBind(queueName, EXCHANGE_NAME, "all.deliver");
+        channel.queueBind(queueName, EXCHANGE_NAME, "all");
         channel.basicQos(1);
 
         // consumer (message handling)
@@ -76,7 +80,7 @@ public class Deliver {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 Order order = Order.createFromBythe(body);
-                System.out.println("Working" + order.toString());
+                System.out.println("Working " + order.toString());
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -90,6 +94,7 @@ public class Deliver {
         // start listening
         channel.basicConsume(firstSpecialisation.getName(), true, consumer);
         channel.basicConsume(secondSpecialisation.getName(), true, consumer);
+        channel.basicConsume(queueName, true, consumer);
     }
 
 
