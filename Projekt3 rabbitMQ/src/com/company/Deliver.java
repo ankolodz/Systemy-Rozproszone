@@ -87,7 +87,7 @@ public class Deliver {
                     e.printStackTrace();
                 }
                 order.work();
-                channel.basicPublish(EXCHANGE_NAME, "agency."+order.getStationName(), null, order.toByte());
+                channel.basicPublish(EXCHANGE_NAME, "all.agency."+order.getStationName(), null, order.toByte());
             }
         };
 
