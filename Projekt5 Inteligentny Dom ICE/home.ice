@@ -39,6 +39,9 @@ module AlarmModule{
    log getLog();
    }
 };
+interface Server{
+   string AllID();
+   }
 
 };
 

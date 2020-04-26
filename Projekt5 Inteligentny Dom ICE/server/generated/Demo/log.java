@@ -146,7 +146,7 @@ public class log implements java.lang.Cloneable,
         if(istr.readOptional(tag, com.zeroc.Ice.OptionalFormat.FSize))
         {
             istr.skip(4);
-            return java.util.Optional.of(log.ice_read(istr));
+            return java.util.Optional.empty();//java.util.Optional.of(log.ice_read(istr));
         }
         else
         {

@@ -22,6 +22,7 @@ public class Server
 			Camera camera1 = new Camera();
 			Camera camera2 = new Camera();
 			Thermomete thermomete = new Thermomete();
+			ServerHandler handler = new ServerHandler("alarm/01, alarm/02, camera/01, camera/02, tmp/01");
 			
 						    
 			// 4. Dodanie wpis�w do tablicy ASM
@@ -30,6 +31,7 @@ public class Server
 			adapter.add(camera1, new Identity("01", "camera"));
 			adapter.add(camera2, new Identity("02", "camera"));
 			adapter.add(thermomete,new Identity("01","tmp"));
+			adapter.add(handler,new Identity("0","server"));
 
 	        
 			// 5. Aktywacja adaptera i przej�cie w p�tl� przetwarzania ��da�
