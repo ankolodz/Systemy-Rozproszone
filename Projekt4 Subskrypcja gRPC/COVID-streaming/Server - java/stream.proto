@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "sr.grpc.gen";
+option java_outer_classname = "StreamingCOVID";
+
+package streaming;
+
+
+enum District{
+    All = 0;
+    Dolnoslaskie = 1;
+    Kujawsko_pomorskie = 2;
+    Lubelskie = 3;
+    Lubuskie = 4;
+    Lodzkie = 5;
+    Malopolskie = 6;
+    Mazowieckie = 7;
+    Opolskie = 8;
+    Podkarpackie = 9;
+    Podlaskie = 10;
+    Pomorskie = 11;
+    Slaskie = 12;
+    Swietokrzyskie = 13;
+    Warminsko_mazurskie = 14;
+    Wielkopolskie = 15;
+    Zachodniopomorskie = 16;
+
+}
+enum State{
+    New_ill = 0;
+    New_dead = 1;
+    New_quarantine = 2;
+}
+message Task
+{
+    District district = 1;
+}
+message Report
+{
+    State state = 1;
+    District district = 2;
+    int32 value = 3;
+}
+
+service StreamTester {
+  rpc GetNewIll(Task) returns (stream Report) {}
+  rpc GetNewDead(Task) returns (stream Report) {}
+  rpc GetNewQuarantine(Task) returns (stream Report) {}
+}
