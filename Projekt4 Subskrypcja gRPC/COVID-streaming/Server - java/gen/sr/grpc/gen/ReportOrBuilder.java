@@ -8,30 +8,31 @@ public interface ReportOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.streaming.State state = 1;</code>
-   * @return The enum numeric value on the wire for state.
-   */
-  int getStateValue();
-  /**
-   * <code>.streaming.State state = 1;</code>
-   * @return The state.
-   */
-  sr.grpc.gen.State getState();
-
-  /**
-   * <code>.streaming.District district = 2;</code>
+   * <code>.streaming.District district = 1;</code>
    * @return The enum numeric value on the wire for district.
    */
   int getDistrictValue();
   /**
-   * <code>.streaming.District district = 2;</code>
+   * <code>.streaming.District district = 1;</code>
    * @return The district.
    */
   sr.grpc.gen.District getDistrict();
 
   /**
-   * <code>int32 value = 3;</code>
-   * @return The value.
+   * <code>int32 died = 2;</code>
+   * @return The died.
    */
-  int getValue();
+  int getDied();
+
+  /**
+   * <code>int32 ill = 3;</code>
+   * @return The ill.
+   */
+  int getIll();
+
+  /**
+   * <code>int32 quarantine = 4;</code>
+   * @return The quarantine.
+   */
+  int getQuarantine();
 }

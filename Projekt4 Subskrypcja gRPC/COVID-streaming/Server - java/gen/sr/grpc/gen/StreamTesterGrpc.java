@@ -28,96 +28,65 @@ public final class StreamTesterGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<sr.grpc.gen.Task,
-      sr.grpc.gen.Report> getGetNewIllMethod;
+      sr.grpc.gen.Report> getGetNewInfoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetNewIll",
+      fullMethodName = SERVICE_NAME + '/' + "GetNewInfo",
       requestType = sr.grpc.gen.Task.class,
       responseType = sr.grpc.gen.Report.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<sr.grpc.gen.Task,
-      sr.grpc.gen.Report> getGetNewIllMethod() {
-    io.grpc.MethodDescriptor<sr.grpc.gen.Task, sr.grpc.gen.Report> getGetNewIllMethod;
-    if ((getGetNewIllMethod = StreamTesterGrpc.getGetNewIllMethod) == null) {
+      sr.grpc.gen.Report> getGetNewInfoMethod() {
+    io.grpc.MethodDescriptor<sr.grpc.gen.Task, sr.grpc.gen.Report> getGetNewInfoMethod;
+    if ((getGetNewInfoMethod = StreamTesterGrpc.getGetNewInfoMethod) == null) {
       synchronized (StreamTesterGrpc.class) {
-        if ((getGetNewIllMethod = StreamTesterGrpc.getGetNewIllMethod) == null) {
-          StreamTesterGrpc.getGetNewIllMethod = getGetNewIllMethod =
+        if ((getGetNewInfoMethod = StreamTesterGrpc.getGetNewInfoMethod) == null) {
+          StreamTesterGrpc.getGetNewInfoMethod = getGetNewInfoMethod =
               io.grpc.MethodDescriptor.<sr.grpc.gen.Task, sr.grpc.gen.Report>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNewIll"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNewInfo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   sr.grpc.gen.Task.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   sr.grpc.gen.Report.getDefaultInstance()))
-              .setSchemaDescriptor(new StreamTesterMethodDescriptorSupplier("GetNewIll"))
+              .setSchemaDescriptor(new StreamTesterMethodDescriptorSupplier("GetNewInfo"))
               .build();
         }
       }
     }
-    return getGetNewIllMethod;
+    return getGetNewInfoMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<sr.grpc.gen.Task,
-      sr.grpc.gen.Report> getGetNewDeadMethod;
+  private static volatile io.grpc.MethodDescriptor<sr.grpc.gen.Ping_msg,
+      sr.grpc.gen.Ping_msg> getPingMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetNewDead",
-      requestType = sr.grpc.gen.Task.class,
-      responseType = sr.grpc.gen.Report.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<sr.grpc.gen.Task,
-      sr.grpc.gen.Report> getGetNewDeadMethod() {
-    io.grpc.MethodDescriptor<sr.grpc.gen.Task, sr.grpc.gen.Report> getGetNewDeadMethod;
-    if ((getGetNewDeadMethod = StreamTesterGrpc.getGetNewDeadMethod) == null) {
+      fullMethodName = SERVICE_NAME + '/' + "Ping",
+      requestType = sr.grpc.gen.Ping_msg.class,
+      responseType = sr.grpc.gen.Ping_msg.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<sr.grpc.gen.Ping_msg,
+      sr.grpc.gen.Ping_msg> getPingMethod() {
+    io.grpc.MethodDescriptor<sr.grpc.gen.Ping_msg, sr.grpc.gen.Ping_msg> getPingMethod;
+    if ((getPingMethod = StreamTesterGrpc.getPingMethod) == null) {
       synchronized (StreamTesterGrpc.class) {
-        if ((getGetNewDeadMethod = StreamTesterGrpc.getGetNewDeadMethod) == null) {
-          StreamTesterGrpc.getGetNewDeadMethod = getGetNewDeadMethod =
-              io.grpc.MethodDescriptor.<sr.grpc.gen.Task, sr.grpc.gen.Report>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNewDead"))
+        if ((getPingMethod = StreamTesterGrpc.getPingMethod) == null) {
+          StreamTesterGrpc.getPingMethod = getPingMethod =
+              io.grpc.MethodDescriptor.<sr.grpc.gen.Ping_msg, sr.grpc.gen.Ping_msg>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Ping"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  sr.grpc.gen.Task.getDefaultInstance()))
+                  sr.grpc.gen.Ping_msg.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  sr.grpc.gen.Report.getDefaultInstance()))
-              .setSchemaDescriptor(new StreamTesterMethodDescriptorSupplier("GetNewDead"))
+                  sr.grpc.gen.Ping_msg.getDefaultInstance()))
+              .setSchemaDescriptor(new StreamTesterMethodDescriptorSupplier("Ping"))
               .build();
         }
       }
     }
-    return getGetNewDeadMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<sr.grpc.gen.Task,
-      sr.grpc.gen.Report> getGetNewQuarantineMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetNewQuarantine",
-      requestType = sr.grpc.gen.Task.class,
-      responseType = sr.grpc.gen.Report.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<sr.grpc.gen.Task,
-      sr.grpc.gen.Report> getGetNewQuarantineMethod() {
-    io.grpc.MethodDescriptor<sr.grpc.gen.Task, sr.grpc.gen.Report> getGetNewQuarantineMethod;
-    if ((getGetNewQuarantineMethod = StreamTesterGrpc.getGetNewQuarantineMethod) == null) {
-      synchronized (StreamTesterGrpc.class) {
-        if ((getGetNewQuarantineMethod = StreamTesterGrpc.getGetNewQuarantineMethod) == null) {
-          StreamTesterGrpc.getGetNewQuarantineMethod = getGetNewQuarantineMethod =
-              io.grpc.MethodDescriptor.<sr.grpc.gen.Task, sr.grpc.gen.Report>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNewQuarantine"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  sr.grpc.gen.Task.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  sr.grpc.gen.Report.getDefaultInstance()))
-              .setSchemaDescriptor(new StreamTesterMethodDescriptorSupplier("GetNewQuarantine"))
-              .build();
-        }
-      }
-    }
-    return getGetNewQuarantineMethod;
+    return getPingMethod;
   }
 
   /**
@@ -170,48 +139,34 @@ public final class StreamTesterGrpc {
 
     /**
      */
-    public void getNewIll(sr.grpc.gen.Task request,
+    public void getNewInfo(sr.grpc.gen.Task request,
         io.grpc.stub.StreamObserver<sr.grpc.gen.Report> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetNewIllMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetNewInfoMethod(), responseObserver);
     }
 
     /**
      */
-    public void getNewDead(sr.grpc.gen.Task request,
-        io.grpc.stub.StreamObserver<sr.grpc.gen.Report> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetNewDeadMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getNewQuarantine(sr.grpc.gen.Task request,
-        io.grpc.stub.StreamObserver<sr.grpc.gen.Report> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetNewQuarantineMethod(), responseObserver);
+    public void ping(sr.grpc.gen.Ping_msg request,
+        io.grpc.stub.StreamObserver<sr.grpc.gen.Ping_msg> responseObserver) {
+      asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetNewIllMethod(),
+            getGetNewInfoMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
                 sr.grpc.gen.Task,
                 sr.grpc.gen.Report>(
-                  this, METHODID_GET_NEW_ILL)))
+                  this, METHODID_GET_NEW_INFO)))
           .addMethod(
-            getGetNewDeadMethod(),
-            asyncServerStreamingCall(
+            getPingMethod(),
+            asyncUnaryCall(
               new MethodHandlers<
-                sr.grpc.gen.Task,
-                sr.grpc.gen.Report>(
-                  this, METHODID_GET_NEW_DEAD)))
-          .addMethod(
-            getGetNewQuarantineMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                sr.grpc.gen.Task,
-                sr.grpc.gen.Report>(
-                  this, METHODID_GET_NEW_QUARANTINE)))
+                sr.grpc.gen.Ping_msg,
+                sr.grpc.gen.Ping_msg>(
+                  this, METHODID_PING)))
           .build();
     }
   }
@@ -232,26 +187,18 @@ public final class StreamTesterGrpc {
 
     /**
      */
-    public void getNewIll(sr.grpc.gen.Task request,
+    public void getNewInfo(sr.grpc.gen.Task request,
         io.grpc.stub.StreamObserver<sr.grpc.gen.Report> responseObserver) {
       asyncServerStreamingCall(
-          getChannel().newCall(getGetNewIllMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetNewInfoMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getNewDead(sr.grpc.gen.Task request,
-        io.grpc.stub.StreamObserver<sr.grpc.gen.Report> responseObserver) {
-      asyncServerStreamingCall(
-          getChannel().newCall(getGetNewDeadMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getNewQuarantine(sr.grpc.gen.Task request,
-        io.grpc.stub.StreamObserver<sr.grpc.gen.Report> responseObserver) {
-      asyncServerStreamingCall(
-          getChannel().newCall(getGetNewQuarantineMethod(), getCallOptions()), request, responseObserver);
+    public void ping(sr.grpc.gen.Ping_msg request,
+        io.grpc.stub.StreamObserver<sr.grpc.gen.Ping_msg> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -271,26 +218,17 @@ public final class StreamTesterGrpc {
 
     /**
      */
-    public java.util.Iterator<sr.grpc.gen.Report> getNewIll(
+    public java.util.Iterator<sr.grpc.gen.Report> getNewInfo(
         sr.grpc.gen.Task request) {
       return blockingServerStreamingCall(
-          getChannel(), getGetNewIllMethod(), getCallOptions(), request);
+          getChannel(), getGetNewInfoMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public java.util.Iterator<sr.grpc.gen.Report> getNewDead(
-        sr.grpc.gen.Task request) {
-      return blockingServerStreamingCall(
-          getChannel(), getGetNewDeadMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public java.util.Iterator<sr.grpc.gen.Report> getNewQuarantine(
-        sr.grpc.gen.Task request) {
-      return blockingServerStreamingCall(
-          getChannel(), getGetNewQuarantineMethod(), getCallOptions(), request);
+    public sr.grpc.gen.Ping_msg ping(sr.grpc.gen.Ping_msg request) {
+      return blockingUnaryCall(
+          getChannel(), getPingMethod(), getCallOptions(), request);
     }
   }
 
@@ -307,11 +245,18 @@ public final class StreamTesterGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new StreamTesterFutureStub(channel, callOptions);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<sr.grpc.gen.Ping_msg> ping(
+        sr.grpc.gen.Ping_msg request) {
+      return futureUnaryCall(
+          getChannel().newCall(getPingMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_GET_NEW_ILL = 0;
-  private static final int METHODID_GET_NEW_DEAD = 1;
-  private static final int METHODID_GET_NEW_QUARANTINE = 2;
+  private static final int METHODID_GET_NEW_INFO = 0;
+  private static final int METHODID_PING = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -330,17 +275,13 @@ public final class StreamTesterGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_NEW_ILL:
-          serviceImpl.getNewIll((sr.grpc.gen.Task) request,
+        case METHODID_GET_NEW_INFO:
+          serviceImpl.getNewInfo((sr.grpc.gen.Task) request,
               (io.grpc.stub.StreamObserver<sr.grpc.gen.Report>) responseObserver);
           break;
-        case METHODID_GET_NEW_DEAD:
-          serviceImpl.getNewDead((sr.grpc.gen.Task) request,
-              (io.grpc.stub.StreamObserver<sr.grpc.gen.Report>) responseObserver);
-          break;
-        case METHODID_GET_NEW_QUARANTINE:
-          serviceImpl.getNewQuarantine((sr.grpc.gen.Task) request,
-              (io.grpc.stub.StreamObserver<sr.grpc.gen.Report>) responseObserver);
+        case METHODID_PING:
+          serviceImpl.ping((sr.grpc.gen.Ping_msg) request,
+              (io.grpc.stub.StreamObserver<sr.grpc.gen.Ping_msg>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -403,9 +344,8 @@ public final class StreamTesterGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new StreamTesterFileDescriptorSupplier())
-              .addMethod(getGetNewIllMethod())
-              .addMethod(getGetNewDeadMethod())
-              .addMethod(getGetNewQuarantineMethod())
+              .addMethod(getGetNewInfoMethod())
+              .addMethod(getPingMethod())
               .build();
         }
       }

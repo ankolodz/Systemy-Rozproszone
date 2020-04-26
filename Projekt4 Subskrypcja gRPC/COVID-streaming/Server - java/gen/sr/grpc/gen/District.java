@@ -9,144 +9,152 @@ package sr.grpc.gen;
 public enum District
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>All = 0;</code>
+   * <code>ALL = 0;</code>
    */
-  All(0),
+  ALL(0),
   /**
-   * <code>Dolnoslaskie = 1;</code>
+   * <code>DOLNOSLASKE = 1;</code>
    */
-  Dolnoslaskie(1),
+  DOLNOSLASKE(1),
   /**
-   * <code>Kujawsko_pomorskie = 2;</code>
+   * <code>KUJAWSKO_POMORSKIE = 2;</code>
    */
-  Kujawsko_pomorskie(2),
+  KUJAWSKO_POMORSKIE(2),
   /**
-   * <code>Lubelskie = 3;</code>
+   * <code>LUBELSKIE = 3;</code>
    */
-  Lubelskie(3),
+  LUBELSKIE(3),
   /**
-   * <code>Lubuskie = 4;</code>
+   * <code>LUBUSKIE = 4;</code>
    */
-  Lubuskie(4),
+  LUBUSKIE(4),
   /**
-   * <code>Lodzkie = 5;</code>
+   * <code>LODZKIE = 5;</code>
    */
-  Lodzkie(5),
+  LODZKIE(5),
   /**
-   * <code>Malopolskie = 6;</code>
+   * <code>MALOPOLSKIE = 6;</code>
    */
-  Malopolskie(6),
+  MALOPOLSKIE(6),
   /**
-   * <code>Mazowieckie = 7;</code>
+   * <code>MAZOWIECKIE = 7;</code>
    */
-  Mazowieckie(7),
+  MAZOWIECKIE(7),
   /**
-   * <code>Opolskie = 8;</code>
+   * <code>OPOLSKIE = 8;</code>
    */
-  Opolskie(8),
+  OPOLSKIE(8),
   /**
-   * <code>Podkarpackie = 9;</code>
+   * <code>PODKARPACKIE = 9;</code>
    */
-  Podkarpackie(9),
+  PODKARPACKIE(9),
   /**
-   * <code>Podlaskie = 10;</code>
+   * <code>PODLASKIE = 10;</code>
    */
-  Podlaskie(10),
+  PODLASKIE(10),
   /**
-   * <code>Pomorskie = 11;</code>
+   * <code>POMORSKIE = 11;</code>
    */
-  Pomorskie(11),
+  POMORSKIE(11),
   /**
-   * <code>Slaskie = 12;</code>
+   * <code>SLASKIE = 12;</code>
    */
-  Slaskie(12),
+  SLASKIE(12),
   /**
-   * <code>Swietokrzyskie = 13;</code>
+   * <code>SWIETOKRZYSKIE = 13;</code>
    */
-  Swietokrzyskie(13),
+  SWIETOKRZYSKIE(13),
   /**
-   * <code>Warminsko_mazurskie = 14;</code>
+   * <code>WARMINSKO_MAZURSKIE = 14;</code>
    */
-  Warminsko_mazurskie(14),
+  WARMINSKO_MAZURSKIE(14),
   /**
-   * <code>Wielkopolskie = 15;</code>
+   * <code>WIELKOPOLSKIE = 15;</code>
    */
-  Wielkopolskie(15),
+  WIELKOPOLSKIE(15),
   /**
-   * <code>Zachodniopomorskie = 16;</code>
+   * <code>ZACHODNIOPOMORSKIE = 16;</code>
    */
-  Zachodniopomorskie(16),
+  ZACHODNIOPOMORSKIE(16),
+  /**
+   * <code>POLAND = 17;</code>
+   */
+  POLAND(17),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>All = 0;</code>
+   * <code>ALL = 0;</code>
    */
-  public static final int All_VALUE = 0;
+  public static final int ALL_VALUE = 0;
   /**
-   * <code>Dolnoslaskie = 1;</code>
+   * <code>DOLNOSLASKE = 1;</code>
    */
-  public static final int Dolnoslaskie_VALUE = 1;
+  public static final int DOLNOSLASKE_VALUE = 1;
   /**
-   * <code>Kujawsko_pomorskie = 2;</code>
+   * <code>KUJAWSKO_POMORSKIE = 2;</code>
    */
-  public static final int Kujawsko_pomorskie_VALUE = 2;
+  public static final int KUJAWSKO_POMORSKIE_VALUE = 2;
   /**
-   * <code>Lubelskie = 3;</code>
+   * <code>LUBELSKIE = 3;</code>
    */
-  public static final int Lubelskie_VALUE = 3;
+  public static final int LUBELSKIE_VALUE = 3;
   /**
-   * <code>Lubuskie = 4;</code>
+   * <code>LUBUSKIE = 4;</code>
    */
-  public static final int Lubuskie_VALUE = 4;
+  public static final int LUBUSKIE_VALUE = 4;
   /**
-   * <code>Lodzkie = 5;</code>
+   * <code>LODZKIE = 5;</code>
    */
-  public static final int Lodzkie_VALUE = 5;
+  public static final int LODZKIE_VALUE = 5;
   /**
-   * <code>Malopolskie = 6;</code>
+   * <code>MALOPOLSKIE = 6;</code>
    */
-  public static final int Malopolskie_VALUE = 6;
+  public static final int MALOPOLSKIE_VALUE = 6;
   /**
-   * <code>Mazowieckie = 7;</code>
+   * <code>MAZOWIECKIE = 7;</code>
    */
-  public static final int Mazowieckie_VALUE = 7;
+  public static final int MAZOWIECKIE_VALUE = 7;
   /**
-   * <code>Opolskie = 8;</code>
+   * <code>OPOLSKIE = 8;</code>
    */
-  public static final int Opolskie_VALUE = 8;
+  public static final int OPOLSKIE_VALUE = 8;
   /**
-   * <code>Podkarpackie = 9;</code>
+   * <code>PODKARPACKIE = 9;</code>
    */
-  public static final int Podkarpackie_VALUE = 9;
+  public static final int PODKARPACKIE_VALUE = 9;
   /**
-   * <code>Podlaskie = 10;</code>
+   * <code>PODLASKIE = 10;</code>
    */
-  public static final int Podlaskie_VALUE = 10;
+  public static final int PODLASKIE_VALUE = 10;
   /**
-   * <code>Pomorskie = 11;</code>
+   * <code>POMORSKIE = 11;</code>
    */
-  public static final int Pomorskie_VALUE = 11;
+  public static final int POMORSKIE_VALUE = 11;
   /**
-   * <code>Slaskie = 12;</code>
+   * <code>SLASKIE = 12;</code>
    */
-  public static final int Slaskie_VALUE = 12;
+  public static final int SLASKIE_VALUE = 12;
   /**
-   * <code>Swietokrzyskie = 13;</code>
+   * <code>SWIETOKRZYSKIE = 13;</code>
    */
-  public static final int Swietokrzyskie_VALUE = 13;
+  public static final int SWIETOKRZYSKIE_VALUE = 13;
   /**
-   * <code>Warminsko_mazurskie = 14;</code>
+   * <code>WARMINSKO_MAZURSKIE = 14;</code>
    */
-  public static final int Warminsko_mazurskie_VALUE = 14;
+  public static final int WARMINSKO_MAZURSKIE_VALUE = 14;
   /**
-   * <code>Wielkopolskie = 15;</code>
+   * <code>WIELKOPOLSKIE = 15;</code>
    */
-  public static final int Wielkopolskie_VALUE = 15;
+  public static final int WIELKOPOLSKIE_VALUE = 15;
   /**
-   * <code>Zachodniopomorskie = 16;</code>
+   * <code>ZACHODNIOPOMORSKIE = 16;</code>
    */
-  public static final int Zachodniopomorskie_VALUE = 16;
+  public static final int ZACHODNIOPOMORSKIE_VALUE = 16;
+  /**
+   * <code>POLAND = 17;</code>
+   */
+  public static final int POLAND_VALUE = 17;
 
 
   public final int getNumber() {
@@ -173,23 +181,24 @@ public enum District
    */
   public static District forNumber(int value) {
     switch (value) {
-      case 0: return All;
-      case 1: return Dolnoslaskie;
-      case 2: return Kujawsko_pomorskie;
-      case 3: return Lubelskie;
-      case 4: return Lubuskie;
-      case 5: return Lodzkie;
-      case 6: return Malopolskie;
-      case 7: return Mazowieckie;
-      case 8: return Opolskie;
-      case 9: return Podkarpackie;
-      case 10: return Podlaskie;
-      case 11: return Pomorskie;
-      case 12: return Slaskie;
-      case 13: return Swietokrzyskie;
-      case 14: return Warminsko_mazurskie;
-      case 15: return Wielkopolskie;
-      case 16: return Zachodniopomorskie;
+      case 0: return ALL;
+      case 1: return DOLNOSLASKE;
+      case 2: return KUJAWSKO_POMORSKIE;
+      case 3: return LUBELSKIE;
+      case 4: return LUBUSKIE;
+      case 5: return LODZKIE;
+      case 6: return MALOPOLSKIE;
+      case 7: return MAZOWIECKIE;
+      case 8: return OPOLSKIE;
+      case 9: return PODKARPACKIE;
+      case 10: return PODLASKIE;
+      case 11: return POMORSKIE;
+      case 12: return SLASKIE;
+      case 13: return SWIETOKRZYSKIE;
+      case 14: return WARMINSKO_MAZURSKIE;
+      case 15: return WIELKOPOLSKIE;
+      case 16: return ZACHODNIOPOMORSKIE;
+      case 17: return POLAND;
       default: return null;
     }
   }

@@ -4,26 +4,25 @@
 package sr.grpc.gen;
 
 /**
- * Protobuf type {@code streaming.Task}
+ * Protobuf type {@code streaming.Ping_msg}
  */
-public  final class Task extends
+public  final class Ping_msg extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:streaming.Task)
-    TaskOrBuilder {
+    // @@protoc_insertion_point(message_implements:streaming.Ping_msg)
+    Ping_msgOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Task.newBuilder() to construct.
-  private Task(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use Ping_msg.newBuilder() to construct.
+  private Ping_msg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Task() {
-    district_ = 0;
+  private Ping_msg() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Task();
+    return new Ping_msg();
   }
 
   @java.lang.Override
@@ -31,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Task(
+  private Ping_msg(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -49,12 +48,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            district_ = rawValue;
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -76,34 +69,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Task_descriptor;
+    return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Ping_msg_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Task_fieldAccessorTable
+    return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Ping_msg_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            sr.grpc.gen.Task.class, sr.grpc.gen.Task.Builder.class);
-  }
-
-  public static final int DISTRICT_FIELD_NUMBER = 1;
-  private int district_;
-  /**
-   * <code>.streaming.District district = 1;</code>
-   * @return The enum numeric value on the wire for district.
-   */
-  public int getDistrictValue() {
-    return district_;
-  }
-  /**
-   * <code>.streaming.District district = 1;</code>
-   * @return The district.
-   */
-  public sr.grpc.gen.District getDistrict() {
-    @SuppressWarnings("deprecation")
-    sr.grpc.gen.District result = sr.grpc.gen.District.valueOf(district_);
-    return result == null ? sr.grpc.gen.District.UNRECOGNIZED : result;
+            sr.grpc.gen.Ping_msg.class, sr.grpc.gen.Ping_msg.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -120,9 +94,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (district_ != sr.grpc.gen.District.ALL.getNumber()) {
-      output.writeEnum(1, district_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -132,10 +103,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (district_ != sr.grpc.gen.District.ALL.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, district_);
-    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -146,12 +113,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof sr.grpc.gen.Task)) {
+    if (!(obj instanceof sr.grpc.gen.Ping_msg)) {
       return super.equals(obj);
     }
-    sr.grpc.gen.Task other = (sr.grpc.gen.Task) obj;
+    sr.grpc.gen.Ping_msg other = (sr.grpc.gen.Ping_msg) obj;
 
-    if (district_ != other.district_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -163,76 +129,74 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DISTRICT_FIELD_NUMBER;
-    hash = (53 * hash) + district_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sr.grpc.gen.Task parseFrom(byte[] data)
+  public static sr.grpc.gen.Ping_msg parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static sr.grpc.gen.Task parseFrom(java.io.InputStream input)
+  public static sr.grpc.gen.Ping_msg parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sr.grpc.gen.Task parseDelimitedFrom(java.io.InputStream input)
+  public static sr.grpc.gen.Ping_msg parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static sr.grpc.gen.Task parseDelimitedFrom(
+  public static sr.grpc.gen.Ping_msg parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static sr.grpc.gen.Task parseFrom(
+  public static sr.grpc.gen.Ping_msg parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -245,7 +209,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(sr.grpc.gen.Task prototype) {
+  public static Builder newBuilder(sr.grpc.gen.Ping_msg prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -261,26 +225,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code streaming.Task}
+   * Protobuf type {@code streaming.Ping_msg}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:streaming.Task)
-      sr.grpc.gen.TaskOrBuilder {
+      // @@protoc_insertion_point(builder_implements:streaming.Ping_msg)
+      sr.grpc.gen.Ping_msgOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Task_descriptor;
+      return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Ping_msg_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Task_fieldAccessorTable
+      return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Ping_msg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              sr.grpc.gen.Task.class, sr.grpc.gen.Task.Builder.class);
+              sr.grpc.gen.Ping_msg.class, sr.grpc.gen.Ping_msg.Builder.class);
     }
 
-    // Construct using sr.grpc.gen.Task.newBuilder()
+    // Construct using sr.grpc.gen.Ping_msg.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -298,25 +262,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      district_ = 0;
-
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Task_descriptor;
+      return sr.grpc.gen.StreamingCOVID.internal_static_streaming_Ping_msg_descriptor;
     }
 
     @java.lang.Override
-    public sr.grpc.gen.Task getDefaultInstanceForType() {
-      return sr.grpc.gen.Task.getDefaultInstance();
+    public sr.grpc.gen.Ping_msg getDefaultInstanceForType() {
+      return sr.grpc.gen.Ping_msg.getDefaultInstance();
     }
 
     @java.lang.Override
-    public sr.grpc.gen.Task build() {
-      sr.grpc.gen.Task result = buildPartial();
+    public sr.grpc.gen.Ping_msg build() {
+      sr.grpc.gen.Ping_msg result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -324,9 +286,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public sr.grpc.gen.Task buildPartial() {
-      sr.grpc.gen.Task result = new sr.grpc.gen.Task(this);
-      result.district_ = district_;
+    public sr.grpc.gen.Ping_msg buildPartial() {
+      sr.grpc.gen.Ping_msg result = new sr.grpc.gen.Ping_msg(this);
       onBuilt();
       return result;
     }
@@ -365,19 +326,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof sr.grpc.gen.Task) {
-        return mergeFrom((sr.grpc.gen.Task)other);
+      if (other instanceof sr.grpc.gen.Ping_msg) {
+        return mergeFrom((sr.grpc.gen.Ping_msg)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(sr.grpc.gen.Task other) {
-      if (other == sr.grpc.gen.Task.getDefaultInstance()) return this;
-      if (other.district_ != 0) {
-        setDistrictValue(other.getDistrictValue());
-      }
+    public Builder mergeFrom(sr.grpc.gen.Ping_msg other) {
+      if (other == sr.grpc.gen.Ping_msg.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -393,69 +351,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      sr.grpc.gen.Task parsedMessage = null;
+      sr.grpc.gen.Ping_msg parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (sr.grpc.gen.Task) e.getUnfinishedMessage();
+        parsedMessage = (sr.grpc.gen.Ping_msg) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
           mergeFrom(parsedMessage);
         }
       }
-      return this;
-    }
-
-    private int district_ = 0;
-    /**
-     * <code>.streaming.District district = 1;</code>
-     * @return The enum numeric value on the wire for district.
-     */
-    public int getDistrictValue() {
-      return district_;
-    }
-    /**
-     * <code>.streaming.District district = 1;</code>
-     * @param value The enum numeric value on the wire for district to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDistrictValue(int value) {
-      district_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.streaming.District district = 1;</code>
-     * @return The district.
-     */
-    public sr.grpc.gen.District getDistrict() {
-      @SuppressWarnings("deprecation")
-      sr.grpc.gen.District result = sr.grpc.gen.District.valueOf(district_);
-      return result == null ? sr.grpc.gen.District.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.streaming.District district = 1;</code>
-     * @param value The district to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDistrict(sr.grpc.gen.District value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      district_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.streaming.District district = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDistrict() {
-      
-      district_ = 0;
-      onChanged();
       return this;
     }
     @java.lang.Override
@@ -471,41 +377,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:streaming.Task)
+    // @@protoc_insertion_point(builder_scope:streaming.Ping_msg)
   }
 
-  // @@protoc_insertion_point(class_scope:streaming.Task)
-  private static final sr.grpc.gen.Task DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:streaming.Ping_msg)
+  private static final sr.grpc.gen.Ping_msg DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new sr.grpc.gen.Task();
+    DEFAULT_INSTANCE = new sr.grpc.gen.Ping_msg();
   }
 
-  public static sr.grpc.gen.Task getDefaultInstance() {
+  public static sr.grpc.gen.Ping_msg getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Task>
-      PARSER = new com.google.protobuf.AbstractParser<Task>() {
+  private static final com.google.protobuf.Parser<Ping_msg>
+      PARSER = new com.google.protobuf.AbstractParser<Ping_msg>() {
     @java.lang.Override
-    public Task parsePartialFrom(
+    public Ping_msg parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Task(input, extensionRegistry);
+      return new Ping_msg(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<Task> parser() {
+  public static com.google.protobuf.Parser<Ping_msg> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Task> getParserForType() {
+  public com.google.protobuf.Parser<Ping_msg> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public sr.grpc.gen.Task getDefaultInstanceForType() {
+  public sr.grpc.gen.Ping_msg getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

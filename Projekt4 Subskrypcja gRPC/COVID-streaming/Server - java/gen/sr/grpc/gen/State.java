@@ -4,37 +4,41 @@
 package sr.grpc.gen;
 
 /**
+ * <pre>
+ * }
+ * </pre>
+ *
  * Protobuf enum {@code streaming.State}
  */
 public enum State
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>New_ill = 0;</code>
+   * <code>NEW_ILL = 0;</code>
    */
-  New_ill(0),
+  NEW_ILL(0),
   /**
-   * <code>New_dead = 1;</code>
+   * <code>NEW_DEAD = 1;</code>
    */
-  New_dead(1),
+  NEW_DEAD(1),
   /**
-   * <code>New_quarantine = 2;</code>
+   * <code>NEW_QUARANTINE = 2;</code>
    */
-  New_quarantine(2),
+  NEW_QUARANTINE(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>New_ill = 0;</code>
+   * <code>NEW_ILL = 0;</code>
    */
-  public static final int New_ill_VALUE = 0;
+  public static final int NEW_ILL_VALUE = 0;
   /**
-   * <code>New_dead = 1;</code>
+   * <code>NEW_DEAD = 1;</code>
    */
-  public static final int New_dead_VALUE = 1;
+  public static final int NEW_DEAD_VALUE = 1;
   /**
-   * <code>New_quarantine = 2;</code>
+   * <code>NEW_QUARANTINE = 2;</code>
    */
-  public static final int New_quarantine_VALUE = 2;
+  public static final int NEW_QUARANTINE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -61,9 +65,9 @@ public enum State
    */
   public static State forNumber(int value) {
     switch (value) {
-      case 0: return New_ill;
-      case 1: return New_dead;
-      case 2: return New_quarantine;
+      case 0: return NEW_ILL;
+      case 1: return NEW_DEAD;
+      case 2: return NEW_QUARANTINE;
       default: return null;
     }
   }
@@ -90,7 +94,7 @@ public enum State
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return sr.grpc.gen.StreamingCOVID.getDescriptor().getEnumTypes().get(1);
+    return sr.grpc.gen.StreamingCOVID.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final State[] VALUES = values();

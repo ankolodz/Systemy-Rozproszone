@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Report() {
-    state_ = 0;
     district_ = 0;
   }
 
@@ -53,18 +52,22 @@ private static final long serialVersionUID = 0L;
           case 8: {
             int rawValue = input.readEnum();
 
-            state_ = rawValue;
+            district_ = rawValue;
             break;
           }
           case 16: {
-            int rawValue = input.readEnum();
 
-            district_ = rawValue;
+            died_ = input.readInt32();
             break;
           }
           case 24: {
 
-            value_ = input.readInt32();
+            ill_ = input.readInt32();
+            break;
+          }
+          case 32: {
+
+            quarantine_ = input.readInt32();
             break;
           }
           default: {
@@ -99,36 +102,17 @@ private static final long serialVersionUID = 0L;
             sr.grpc.gen.Report.class, sr.grpc.gen.Report.Builder.class);
   }
 
-  public static final int STATE_FIELD_NUMBER = 1;
-  private int state_;
-  /**
-   * <code>.streaming.State state = 1;</code>
-   * @return The enum numeric value on the wire for state.
-   */
-  public int getStateValue() {
-    return state_;
-  }
-  /**
-   * <code>.streaming.State state = 1;</code>
-   * @return The state.
-   */
-  public sr.grpc.gen.State getState() {
-    @SuppressWarnings("deprecation")
-    sr.grpc.gen.State result = sr.grpc.gen.State.valueOf(state_);
-    return result == null ? sr.grpc.gen.State.UNRECOGNIZED : result;
-  }
-
-  public static final int DISTRICT_FIELD_NUMBER = 2;
+  public static final int DISTRICT_FIELD_NUMBER = 1;
   private int district_;
   /**
-   * <code>.streaming.District district = 2;</code>
+   * <code>.streaming.District district = 1;</code>
    * @return The enum numeric value on the wire for district.
    */
   public int getDistrictValue() {
     return district_;
   }
   /**
-   * <code>.streaming.District district = 2;</code>
+   * <code>.streaming.District district = 1;</code>
    * @return The district.
    */
   public sr.grpc.gen.District getDistrict() {
@@ -137,14 +121,34 @@ private static final long serialVersionUID = 0L;
     return result == null ? sr.grpc.gen.District.UNRECOGNIZED : result;
   }
 
-  public static final int VALUE_FIELD_NUMBER = 3;
-  private int value_;
+  public static final int DIED_FIELD_NUMBER = 2;
+  private int died_;
   /**
-   * <code>int32 value = 3;</code>
-   * @return The value.
+   * <code>int32 died = 2;</code>
+   * @return The died.
    */
-  public int getValue() {
-    return value_;
+  public int getDied() {
+    return died_;
+  }
+
+  public static final int ILL_FIELD_NUMBER = 3;
+  private int ill_;
+  /**
+   * <code>int32 ill = 3;</code>
+   * @return The ill.
+   */
+  public int getIll() {
+    return ill_;
+  }
+
+  public static final int QUARANTINE_FIELD_NUMBER = 4;
+  private int quarantine_;
+  /**
+   * <code>int32 quarantine = 4;</code>
+   * @return The quarantine.
+   */
+  public int getQuarantine() {
+    return quarantine_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -161,14 +165,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (state_ != sr.grpc.gen.State.New_ill.getNumber()) {
-      output.writeEnum(1, state_);
+    if (district_ != sr.grpc.gen.District.ALL.getNumber()) {
+      output.writeEnum(1, district_);
     }
-    if (district_ != sr.grpc.gen.District.All.getNumber()) {
-      output.writeEnum(2, district_);
+    if (died_ != 0) {
+      output.writeInt32(2, died_);
     }
-    if (value_ != 0) {
-      output.writeInt32(3, value_);
+    if (ill_ != 0) {
+      output.writeInt32(3, ill_);
+    }
+    if (quarantine_ != 0) {
+      output.writeInt32(4, quarantine_);
     }
     unknownFields.writeTo(output);
   }
@@ -179,17 +186,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (state_ != sr.grpc.gen.State.New_ill.getNumber()) {
+    if (district_ != sr.grpc.gen.District.ALL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, state_);
+        .computeEnumSize(1, district_);
     }
-    if (district_ != sr.grpc.gen.District.All.getNumber()) {
+    if (died_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, district_);
+        .computeInt32Size(2, died_);
     }
-    if (value_ != 0) {
+    if (ill_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, value_);
+        .computeInt32Size(3, ill_);
+    }
+    if (quarantine_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, quarantine_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -206,10 +217,13 @@ private static final long serialVersionUID = 0L;
     }
     sr.grpc.gen.Report other = (sr.grpc.gen.Report) obj;
 
-    if (state_ != other.state_) return false;
     if (district_ != other.district_) return false;
-    if (getValue()
-        != other.getValue()) return false;
+    if (getDied()
+        != other.getDied()) return false;
+    if (getIll()
+        != other.getIll()) return false;
+    if (getQuarantine()
+        != other.getQuarantine()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -221,12 +235,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + STATE_FIELD_NUMBER;
-    hash = (53 * hash) + state_;
     hash = (37 * hash) + DISTRICT_FIELD_NUMBER;
     hash = (53 * hash) + district_;
-    hash = (37 * hash) + VALUE_FIELD_NUMBER;
-    hash = (53 * hash) + getValue();
+    hash = (37 * hash) + DIED_FIELD_NUMBER;
+    hash = (53 * hash) + getDied();
+    hash = (37 * hash) + ILL_FIELD_NUMBER;
+    hash = (53 * hash) + getIll();
+    hash = (37 * hash) + QUARANTINE_FIELD_NUMBER;
+    hash = (53 * hash) + getQuarantine();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -360,11 +376,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      state_ = 0;
-
       district_ = 0;
 
-      value_ = 0;
+      died_ = 0;
+
+      ill_ = 0;
+
+      quarantine_ = 0;
 
       return this;
     }
@@ -392,9 +410,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public sr.grpc.gen.Report buildPartial() {
       sr.grpc.gen.Report result = new sr.grpc.gen.Report(this);
-      result.state_ = state_;
       result.district_ = district_;
-      result.value_ = value_;
+      result.died_ = died_;
+      result.ill_ = ill_;
+      result.quarantine_ = quarantine_;
       onBuilt();
       return result;
     }
@@ -443,14 +462,17 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(sr.grpc.gen.Report other) {
       if (other == sr.grpc.gen.Report.getDefaultInstance()) return this;
-      if (other.state_ != 0) {
-        setStateValue(other.getStateValue());
-      }
       if (other.district_ != 0) {
         setDistrictValue(other.getDistrictValue());
       }
-      if (other.getValue() != 0) {
-        setValue(other.getValue());
+      if (other.getDied() != 0) {
+        setDied(other.getDied());
+      }
+      if (other.getIll() != 0) {
+        setIll(other.getIll());
+      }
+      if (other.getQuarantine() != 0) {
+        setQuarantine(other.getQuarantine());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -481,68 +503,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int state_ = 0;
-    /**
-     * <code>.streaming.State state = 1;</code>
-     * @return The enum numeric value on the wire for state.
-     */
-    public int getStateValue() {
-      return state_;
-    }
-    /**
-     * <code>.streaming.State state = 1;</code>
-     * @param value The enum numeric value on the wire for state to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStateValue(int value) {
-      state_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.streaming.State state = 1;</code>
-     * @return The state.
-     */
-    public sr.grpc.gen.State getState() {
-      @SuppressWarnings("deprecation")
-      sr.grpc.gen.State result = sr.grpc.gen.State.valueOf(state_);
-      return result == null ? sr.grpc.gen.State.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.streaming.State state = 1;</code>
-     * @param value The state to set.
-     * @return This builder for chaining.
-     */
-    public Builder setState(sr.grpc.gen.State value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      state_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.streaming.State state = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearState() {
-      
-      state_ = 0;
-      onChanged();
-      return this;
-    }
-
     private int district_ = 0;
     /**
-     * <code>.streaming.District district = 2;</code>
+     * <code>.streaming.District district = 1;</code>
      * @return The enum numeric value on the wire for district.
      */
     public int getDistrictValue() {
       return district_;
     }
     /**
-     * <code>.streaming.District district = 2;</code>
+     * <code>.streaming.District district = 1;</code>
      * @param value The enum numeric value on the wire for district to set.
      * @return This builder for chaining.
      */
@@ -552,7 +522,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.streaming.District district = 2;</code>
+     * <code>.streaming.District district = 1;</code>
      * @return The district.
      */
     public sr.grpc.gen.District getDistrict() {
@@ -561,7 +531,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? sr.grpc.gen.District.UNRECOGNIZED : result;
     }
     /**
-     * <code>.streaming.District district = 2;</code>
+     * <code>.streaming.District district = 1;</code>
      * @param value The district to set.
      * @return This builder for chaining.
      */
@@ -575,7 +545,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.streaming.District district = 2;</code>
+     * <code>.streaming.District district = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearDistrict() {
@@ -585,32 +555,92 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int value_ ;
+    private int died_ ;
     /**
-     * <code>int32 value = 3;</code>
-     * @return The value.
+     * <code>int32 died = 2;</code>
+     * @return The died.
      */
-    public int getValue() {
-      return value_;
+    public int getDied() {
+      return died_;
     }
     /**
-     * <code>int32 value = 3;</code>
-     * @param value The value to set.
+     * <code>int32 died = 2;</code>
+     * @param value The died to set.
      * @return This builder for chaining.
      */
-    public Builder setValue(int value) {
+    public Builder setDied(int value) {
       
-      value_ = value;
+      died_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 value = 3;</code>
+     * <code>int32 died = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearValue() {
+    public Builder clearDied() {
       
-      value_ = 0;
+      died_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int ill_ ;
+    /**
+     * <code>int32 ill = 3;</code>
+     * @return The ill.
+     */
+    public int getIll() {
+      return ill_;
+    }
+    /**
+     * <code>int32 ill = 3;</code>
+     * @param value The ill to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIll(int value) {
+      
+      ill_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 ill = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIll() {
+      
+      ill_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int quarantine_ ;
+    /**
+     * <code>int32 quarantine = 4;</code>
+     * @return The quarantine.
+     */
+    public int getQuarantine() {
+      return quarantine_;
+    }
+    /**
+     * <code>int32 quarantine = 4;</code>
+     * @param value The quarantine to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuarantine(int value) {
+      
+      quarantine_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 quarantine = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQuarantine() {
+      
+      quarantine_ = 0;
       onChanged();
       return this;
     }

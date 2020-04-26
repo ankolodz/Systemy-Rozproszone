@@ -17,9 +17,8 @@ public class CovidServer
 	private void start() throws IOException 
 	{
 		server = ServerBuilder.forPort(port)
-				.addService(new StreamQuarantineImpl())
-				.addService(new StreamDeadImpl())
-				.addService(new StreamSickImpl())
+				.addService(new StreamNewInfo())
+//				.addService(new PingImpl())
 
 				.build()
 				.start();
