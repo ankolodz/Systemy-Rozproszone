@@ -28,8 +28,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/6_shop_price_comparator" />
   </component>
-  <component name="RunManager" selected="Application.Z3">
+  <component name="RunManager" selected="Application.RaceCondition">
+    <configuration name="RaceCondition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RaceCondition" />
+      <module name="AkkaLab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Z1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Z1" />
       <module name="AkkaLab" />
@@ -60,6 +68,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RaceCondition" />
         <item itemvalue="Application.Z3" />
         <item itemvalue="Application.Z2_AppRemote" />
         <item itemvalue="Application.Z2_AppLocal" />
@@ -91,6 +100,9 @@
       <updated>1589270497828</updated>
       <workItem from="1589270500078" duration="1246000" />
       <workItem from="1589528345083" duration="13332000" />
+      <workItem from="1590755741611" duration="3059000" />
+      <workItem from="1590768837224" duration="2598000" />
+      <workItem from="1590838483187" duration="1144000" />
     </task>
     <servers />
   </component>
@@ -102,21 +114,34 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589529448925" />
-    <state width="1876" height="340" key="GridCell.Tab.0.bottom" timestamp="1589546344913">
+    <state x="2567" y="268" key="FileChooserDialogImpl" timestamp="1590850823473">
+      <screen x="1920" y="0" width="1680" height="1050" />
+    </state>
+    <state x="739" y="268" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590756792464" />
+    <state x="2567" y="268" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1680.1050@1920.0.1680.1050" timestamp="1590850823473" />
+    <state width="1876" height="420" key="GridCell.Tab.0.bottom" timestamp="1590756170862">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
-    <state width="1876" height="340" key="GridCell.Tab.0.center" timestamp="1589546344913">
+    <state width="1876" height="420" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590756170862" />
+    <state width="1876" height="420" key="GridCell.Tab.0.center" timestamp="1590756170862">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
-    <state width="1876" height="340" key="GridCell.Tab.0.left" timestamp="1589546344913">
+    <state width="1876" height="420" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590756170862" />
+    <state width="1876" height="420" key="GridCell.Tab.0.left" timestamp="1590756170862">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
-    <state width="1876" height="340" key="GridCell.Tab.0.right" timestamp="1589546344913">
+    <state width="1876" height="420" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590756170862" />
+    <state width="1876" height="420" key="GridCell.Tab.0.right" timestamp="1590756170862">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
+    <state width="1876" height="420" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590756170862" />
+    <state x="342" y="150" key="new project wizard" timestamp="1590756824674">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="342" y="150" key="new project wizard/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590756824674" />
+    <state x="682" y="442" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1590755962061">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="682" y="442" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590755962061" />
   </component>
 </project>

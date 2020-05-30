@@ -13,23 +13,23 @@ public class Z2_AppRemote {
 
     public static void main(String[] args) throws Exception {
 
-        // config
-        File configFile = new File("remote_app.conf");
-        Config config = ConfigFactory.parseFile(configFile);
-        
-        // create actor system & actors
-        final ActorSystem system = ActorSystem.create("remote_system", config);
-        final ActorRef remote = system.actorOf(Props.create(Z2_RemoteActor.class), "remote");
+    // config
+    File configFile = new File("remote_app.conf");
+    Config config = ConfigFactory.parseFile(configFile);
 
-        // interaction
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    // create actor system & actors
+    final ActorSystem system = ActorSystem.create("remote_system", config);
+    final ActorRef remote = system.actorOf(Props.create(Z2_RemoteActor.class), "remote");
+
+    // interaction
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
-            String line = br.readLine();
-            if (line.equals("q")) {
-                break;
-            }
+        String line = br.readLine();
+        if (line.equals("q")) {
+            break;
         }
+    }
 
         system.terminate();
-    }
+}
 }

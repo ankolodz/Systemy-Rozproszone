@@ -28,8 +28,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RaceCondition">
+    <configuration name="RaceCondition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RaceCondition" />
+      <module name="AkkaLab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Z1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Z1" />
       <module name="AkkaLab" />
@@ -37,8 +45,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Z2_AppLocal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Z2_AppLocal" />
+      <module name="AkkaLab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Z2_AppRemote" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Z2_AppRemote" />
+      <module name="AkkaLab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Z3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Z3" />
+      <module name="AkkaLab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RaceCondition" />
+        <item itemvalue="Application.Z3" />
+        <item itemvalue="Application.Z2_AppRemote" />
+        <item itemvalue="Application.Z2_AppLocal" />
         <item itemvalue="Application.Z1" />
       </list>
     </recent_temporary>
@@ -66,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589270497828</updated>
       <workItem from="1589270500078" duration="1246000" />
-      <workItem from="1589528345083" duration="1814000" />
+      <workItem from="1589528345083" duration="13332000" />
     </task>
     <servers />
   </component>
@@ -78,5 +111,25 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589529448925" />
+    <state width="1876" height="340" key="GridCell.Tab.0.bottom" timestamp="1589546344913">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
+    <state width="1876" height="340" key="GridCell.Tab.0.center" timestamp="1589546344913">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="340" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
+    <state width="1876" height="340" key="GridCell.Tab.0.left" timestamp="1589546344913">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="340" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
+    <state width="1876" height="340" key="GridCell.Tab.0.right" timestamp="1589546344913">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="340" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1589546344913" />
+    <state x="682" y="442" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1590755962061">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="682" y="442" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1050/1920.0.1680.1050@0.0.1920.1050" timestamp="1590755962061" />
   </component>
 </project>
