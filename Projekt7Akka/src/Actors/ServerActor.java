@@ -35,11 +35,15 @@ public class ServerActor extends AbstractActor {
                 .match(ServerRequest.class, request->{
                     ActorRef shop1 = getContext().actorOf(Props.create(ShopActor.class),"shop_"+ nextID + "_1");
                     ActorRef shop2 = getContext().actorOf(Props.create(ShopActor.class),"shop_"+ nextID + "_2");
+                    ActorRef db = getContext().actorOf(Props.create(DbActor.class),"db_"+nextID);
                     request.setTaskID(nextID);
+                    DatabaseMessage databaseMessage = new DatabaseMessage(getSelf(),request.getProductName(),nextID);
                     nextID++;
 
+                    db.tell(databaseMessage,getSelf());
                     shop1.tell(request,getSelf());
                     shop2.tell(request,getSelf());
+
 
                     actuallTask.put(nextID,new Task(nextID,request.getProductName(),request.getSender()));
 
@@ -47,7 +51,7 @@ public class ServerActor extends AbstractActor {
                             .system()
                             .scheduler()
                             .scheduleOnce(
-                                    Duration.ofMillis(GlobalConstance.SERVER_TIMEOUT),
+                                    Duration.ofMillis(GlobalConstains.SERVER_TIMEOUT),
                                     getSelf(),
                                     new KillProcessing(request.getTaskID()),
                                     getContext().getSystem().dispatcher(),
@@ -63,10 +67,9 @@ public class ServerActor extends AbstractActor {
 
                     ServerResponse response;
                     if (task.getPriceSize() != 0)
-                        response = new ServerResponse(task.getProductName(), task.getBetterPrice(),State.OK);
+                        response = new ServerResponse(task.getProductName(), task.getBetterPrice(),task.getDbCount(),State.OK);
                     else
-                        response = new ServerResponse(task.getProductName(), -1,State.TIME_OUT);
-
+                        response = new ServerResponse(task.getProductName(), -1,task.getDbCount(),State.TIME_OUT);
                     task.getReciver().tell(response,getSelf());
 
                 })
@@ -76,18 +79,33 @@ public class ServerActor extends AbstractActor {
                     Task task = actuallTask.get(shopResponse.getId());
                     task.addPrice(shopResponse.getPrice());
 
-                    if(task.getPriceSize() == 2){
-                        actuallTask.remove(task.getID());
-                        ServerResponse response = new ServerResponse(task.getProductName(), task.getBetterPrice(),State.OK);
-                        task.getReciver().tell(response,getSelf());
+                    if(task.getPriceSize() == 2 && task.getDbCount() != -1){
+                        send(task.getID());
                     }
+                })
+                .match(DatabaseMessage.class, db->{
+                    if (!actuallTask.containsKey(db.getTaskID()))
+                        return;
+                    Task task = actuallTask.get(db.getTaskID());
+                    task.setDbCount(db.getCounter());
+                    if(task.getPriceSize() == 2){
+                        send(task.getID());
+                    }
+
 
                 })
                 .matchAny(unknown ->{
                     System.err.println("Unknown message");
                 })
                 .build();
-
-
     }
+    private void send(int ID){
+        if(!actuallTask.containsKey(ID))
+            return;
+        Task task = actuallTask.get(ID);
+        actuallTask.remove(task.getID());
+        ServerResponse response = new ServerResponse(task.getProductName(), task.getBetterPrice(),task.getDbCount(),State.OK);
+        task.getReciver().tell(response,getSelf());
+        }
+
 }

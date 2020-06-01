@@ -1,7 +1,7 @@
 import Actors.ClientActor;
 import Actors.ServerActor;
+import Database.DataBase;
 import Model.ClientRequest;
-import Model.ServerRequest;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
@@ -21,6 +21,7 @@ public class Main {
 
     public static void simulateManyActors()
     {
+        DataBase.createTable();
         List<String> products = new ArrayList<>(Arrays.asList("drink", "chips", "cola", "fish", "laptop","pen"));
 
         List<ActorRef> clients = new ArrayList<>();

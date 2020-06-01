@@ -1,6 +1,6 @@
 package Actors;
 
-import Model.GlobalConstance;
+import Model.GlobalConstains;
 import Model.ServerRequest;
 import Model.ShopResponse;
 import akka.actor.AbstractActor;
@@ -14,7 +14,7 @@ public class ShopActor extends AbstractActor {
                 .match(ServerRequest.class, request -> {
                     Random random = new Random();
                     Thread.sleep(Math.abs(random.nextInt()%500));
-                    ShopResponse shopResponse = new ShopResponse(request.getTaskID(),Math.abs(random.nextDouble()*1000% GlobalConstance.MAX_PRICE));
+                    ShopResponse shopResponse = new ShopResponse(request.getTaskID(),Math.abs(random.nextDouble()*1000% GlobalConstains.MAX_PRICE));
                     getSender().tell(shopResponse,null);
                     getContext().stop(getSelf());
                 })

@@ -10,6 +10,7 @@ public class Task {
     private String productName;
     private List<Double> prices;
     private ActorRef reciver;
+    private int dbCount = -1;
 
 
     public Task(int ID, String productName, ActorRef reciver) {
@@ -17,6 +18,14 @@ public class Task {
         this.productName = productName;
         this.reciver = reciver;
         this.prices = new ArrayList<>();
+    }
+
+    public int getDbCount() {
+        return dbCount;
+    }
+
+    public void setDbCount(int dbCount) {
+        this.dbCount = dbCount;
     }
 
     public int getID() {

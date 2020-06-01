@@ -20,16 +20,15 @@ public class ClientActor extends AbstractActor {
                         stringBuilder.append("Best price for ")
                                 .append(response.getProductName())
                                 .append(" is ")
-                                .append(response.getPrice());
+                                .append(response.getPrice())
+                                .append(" and this ask is ")
+                                .append(response.getCounter());
                     }
                     else{
                         stringBuilder.append("Time Out");
                     }
                     stringBuilder.append("\n");
                     System.out.println(stringBuilder.toString());
-                })
-                .match(ShopResponse.class,a->{
-                    System.out.println("what the fuck!");
                 })
                 .matchAny(unknown ->{
                     System.err.println(unknown.toString() + " Unknown message");
